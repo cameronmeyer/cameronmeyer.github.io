@@ -1,3 +1,10 @@
-theme: jekyll-theme-minimal
 title: Cameron's homepage
 description: TEST DESCRIPTION!
+
+defaults:
+  - scope:
+      path: _pages
+    values:
+      layout: default
+
+exclude: ["README.md"]
