@@ -1,0 +1,47 @@
+@import "_colors";
+
+footer.main
+{
+    @media (max-width: 991px)
+    {
+        padding-top: 2px;
+        background-color: $clr-sgda-yellow;
+        background: linear-gradient(90deg, $clr-sgda-red 0%, $clr-sgda-yellow 33%, $clr-sgda-green 50%, $clr-sgda-blue 90%);
+
+        a
+        {
+            transition: background-color .1s;
+        }
+
+        a:hover
+        {
+            background-color: darken($clr-sgda-darkgrey, 8);
+        }
+
+        .links
+        {
+            max-height: 0;
+            transition: max-height .3s;
+        }
+        
+        .links.active
+        {
+            max-height: 10rem;
+        }
+    }
+
+    @media (min-width: 992px)
+    {
+        .content
+        {
+            padding-top: 2px;
+            background-color: $clr-sgda-yellow;
+            background: linear-gradient(90deg, $clr-sgda-red 0%, $clr-sgda-yellow 33%, $clr-sgda-green 50%, $clr-sgda-blue 90%);
+
+            > *
+            {
+                background-color: $clr-black;
+            }
+        }
+    }
+}

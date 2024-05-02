@@ -1,0 +1,225 @@
+:root
+{
+    --sgda_blue: #36a8b3;
+    --sgda_green: #74b336;
+    --sgda_yellow: #ffcf40;
+    --sgda_red: #cc3629;
+}
+
+body
+{
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.5;
+
+    color: $clr-white;
+    background-color: $clr-black;
+    background: url('/assets/images/TileablePatternBlack-168.png') repeat;
+    
+    padding: 0;
+    margin: 0;
+
+    animation: slide 10s linear infinite;
+    background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    font-family: "brandon-grotesque", sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+    margin-top: 1.5rem;
+    margin-bottom: .75rem;
+}
+
+p
+{
+    margin: .75rem 0;
+}
+
+hr
+{
+    height: .15rem;
+    margin: 2rem 0 3rem;
+
+    border: none;
+    background-color: $clr-darkwhite;
+    border-radius: 3px;
+}
+
+// reponsive layout base
+.content-wrapper
+{
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
+
+$max-width: 900px;
+.content, .children-are-content > *:not(.ignore)
+{
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: $max-width)
+{
+    .children-are-content > *:not(.ignore)
+    {
+        padding-left: 1.75rem;
+        padding-right: 1.75rem;
+    }
+}
+
+main.children-are-content
+{
+    > h1, .h-color
+    {
+        color: $clr-sgda-yellow;
+    }
+
+    > h1:nth-of-type(2n), .h-color:nth-of-type(2n)
+    {
+        color: $clr-sgda-green;
+    }
+
+    > h1:nth-of-type(3n), .h-color:nth-of-type(3n)
+    {
+        color: $clr-sgda-blue;
+    }
+
+    > h1:nth-of-type(4n), .h-color:nth-of-type(4n)
+    {
+        color: $clr-sgda-red;
+    }
+}
+
+// hide half rule if at bottom of content
+// simplifies list iterations
+main > hr:last-child
+{
+        display: none;
+}
+
+// default links
+a, a:visited, a:focus
+{
+    text-decoration: none;
+    color: $clr-sgda-blue;
+    transition: color .15s;
+}
+
+a:hover
+{
+    text-decoration: none;
+    color: $clr-sgda-yellow;
+}
+
+a.button
+{
+    background-color: $clr-sgda-blue;
+    color: $clr-sgda-darkgrey;
+    padding: .5rem 1rem;
+
+    transition: all .1s;
+    border-radius: 3px;
+}
+
+a.button:hover
+{
+    background-color: $clr-sgda-yellow;
+    color: $clr-sgda-darkgrey;
+}
+
+// arrow animation
+a .icon-arrow-right
+{
+    transition: all ease-out .15s;
+}
+
+a:focus .icon-arrow-right
+{
+    transform: translateX(25px);
+    opacity: 0;
+}
+
+// default button
+button
+{
+    border: none;
+}
+
+// raisincss extension
+.h-fit
+{
+    height: fit-content;
+}
+
+.sz-fit
+{
+    width: fit-content;
+    height: fit-content;
+}
+
+.line-1
+{
+    line-height: 1;
+}
+
+@media (min-width: 576px)
+{
+    .sm\:w-max-1\/2
+    {
+        max-width: 50%;
+    }
+}
+
+// colors
+.bg-black
+{
+    background-color: $clr-black !important;
+}
+
+.bg-white
+{
+    background-color: $clr-white !important;
+}
+
+.c-white
+{
+    color: $clr-white !important;
+}
+
+h1.logo-shadow-cascade
+{
+    font-size: 9rem;
+    transform: skewY(-7deg);
+    margin-bottom: 1.6rem;
+
+    color: darken($clr-white, 5);
+
+    $offset-x: .19rem;
+    $offset-y: .42rem;
+    text-shadow: $clr-sgda-red $offset-x $offset-y, $clr-sgda-yellow $offset-x*2 $offset-y*2, $clr-sgda-green $offset-x*3 $offset-y*3, $clr-sgda-blue $offset-x*4 $offset-y*4;//, $clr-black 10px -10px 0px -3px;//, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
+
+@media (max-width: 768px)
+{
+    h1.logo-shadow-cascade
+    {
+        font-size: 5rem;
+    }
+}
+
+@keyframes slide
+{
+    0%
+    {
+        background-position-x: 0;
+        background-position-y: 0;
+    }
+    100% {
+        background-position-x: 100px;
+        background-position-y: 100px;
+    }
+}
