@@ -3,7 +3,11 @@
 
 nav.main
 {
+    position: fixed;
+    left: 0;
+    right: 0;
     font-weight: 600;
+    z-index: 5;
 
     @media (max-width: 991px)
     {
