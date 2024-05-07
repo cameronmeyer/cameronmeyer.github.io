@@ -16,18 +16,6 @@
   fa: icon-twitter
   link: https://utdsgda.club/twitter
 
-- name: Facebook
-  fa: icon-facebook
-  link: https://utdsgda.club/facebook
-
-- name: Twitch
-  fa: icon-twitch
-  link: https://utdsgda.club/twitch
-
-- name: YouTube
-  fa: icon-youtube
-  link: https://utdsgda.club/youtube
-
 - name: LinkedIn
   fa: icon-linkedin
   link: https://utdsgda.club/linkedin
