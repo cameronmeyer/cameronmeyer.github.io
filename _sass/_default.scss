@@ -1,19 +1,26 @@
-:root
-{
+:root {
     --sgda_blue: #36a8b3;
     --sgda_green: #74b336;
     --sgda_yellow: #ffcf40;
     --sgda_red: #cc3629;
+
+
+    --mandarin-red: #e55039;
+    --squash-blossom: #f6b93b;
+    --jalapeno-red: #b71540;
+    --dark-sapphire: #0c2461;
 }
 
 body
 {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.5;
 
     color: $clr-white;
     background-color: $clr-black;
-    background: url('/assets/images/TileablePatternBlack-168.png') repeat;
+    //background: url('/assets/images/TileablePatternBlack-168.png') repeat;
     
     padding: 0;
     margin: 0;
@@ -24,12 +31,16 @@ body
 
 h1, h2, h3, h4, h5, h6
 {
-    font-family: "brandon-grotesque", sans-serif;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    //font-family: "brandon-grotesque", sans-serif;
     text-transform: uppercase;
-    font-weight: bold;
+    //font-weight: bold;
     
-    margin-top: 1.5rem;
-    margin-bottom: .75rem;
+    //margin-top: 1.5rem;
+    //margin-bottom: .75rem;
 }
 
 p
@@ -71,26 +82,22 @@ $max-width: 900px;
     }
 }
 
-main.children-are-content
-{
-    > h1, .h-color
-    {
-        color: $clr-sgda-yellow;
+// changes text color with each occurance of h1 on page
+main.children-are-content {
+    > h1, .h-color {
+        color: $clr-aurora-green;
     }
 
-    > h1:nth-of-type(2n), .h-color:nth-of-type(2n)
-    {
-        color: $clr-sgda-green;
+    > h1:nth-of-type(2n), .h-color:nth-of-type(2n) {
+        color: $clr-livid;
     }
 
-    > h1:nth-of-type(3n), .h-color:nth-of-type(3n)
-    {
-        color: $clr-sgda-blue;
+    > h1:nth-of-type(3n), .h-color:nth-of-type(3n) {
+        color: $clr-mandarin-red;
     }
 
-    > h1:nth-of-type(4n), .h-color:nth-of-type(4n)
-    {
-        color: $clr-sgda-red;
+    > h1:nth-of-type(4n), .h-color:nth-of-type(4n) {
+        color: $clr-reef-encounter;
     }
 }
 
@@ -102,32 +109,27 @@ main > hr:last-child
 }
 
 // default links
-a, a:visited, a:focus
-{
+a, a:visited, a:focus {
     text-decoration: none;
-    color: $clr-sgda-blue;
+    color: $clr-livid;
     transition: color .15s;
 }
 
-a:hover
-{
+a:hover {
     text-decoration: none;
-    color: $clr-sgda-yellow;
+    color: $clr-squash-blossom;
 }
 
-a.button
-{
-    background-color: $clr-sgda-blue;
+a.button {
+    background-color: $clr-livid;
     color: $clr-sgda-darkgrey;
     padding: .5rem 1rem;
-
     transition: all .1s;
     border-radius: 3px;
 }
 
-a.button:hover
-{
-    background-color: $clr-sgda-yellow;
+a.button:hover {
+    background-color: $clr-squash-blossom;
     color: $clr-sgda-darkgrey;
 }
 
@@ -190,17 +192,16 @@ button
     color: $clr-white !important;
 }
 
-h1.logo-shadow-cascade
-{
-    font-size: 9rem;
+h1.logo-shadow-cascade {
+    font-size: 8rem;
     transform: skewY(-7deg);
-    margin-bottom: 1.6rem;
-
+    //margin-bottom: 1rem;
     color: darken($clr-white, 5);
 
-    $offset-x: .19rem;
-    $offset-y: .42rem;
-    text-shadow: $clr-sgda-red $offset-x $offset-y, $clr-sgda-yellow $offset-x*2 $offset-y*2, $clr-sgda-green $offset-x*3 $offset-y*3, $clr-sgda-blue $offset-x*4 $offset-y*4;//, $clr-black 10px -10px 0px -3px;//, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+    $offset-x: .5rem;
+    $offset-y: .5rem;
+    text-shadow: $clr-dark-sapphire $offset-x $offset-y, $clr-jalapeno-red $offset-x*2 $offset-y*2, $clr-mandarin-red $offset-x*3 $offset-y*3, $clr-squash-blossom $offset-x*4 $offset-y*4;
+    //text-shadow: $clr-sgda-red $offset-x $offset-y, $clr-sgda-yellow $offset-x*2 $offset-y*2, $clr-sgda-green $offset-x*3 $offset-y*3, $clr-sgda-blue $offset-x*4 $offset-y*4;//, $clr-black 10px -10px 0px -3px;//, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
 }
 
 @media (max-width: 768px)

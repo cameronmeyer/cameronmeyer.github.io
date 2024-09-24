@@ -18,9 +18,10 @@ else
     window.attachEvent('onload', title);
 }
 
+/*
 function title()
 {
-    /* ignore mobile browsers */
+    // ignore mobile browsers
     if (navigator.userAgent.toLowerCase().match(/mobile/i)) return;
     
     let logos = document.getElementsByClassName('logo-shadow-cascade');
@@ -42,7 +43,7 @@ function title()
             const xWalk = Math.round(map(x - center_x, -window.innerWidth/2, window.innerWidth/2, -walk_amount, walk_amount));
             const yWalk = Math.round(map(y - center_y, -window.innerHeight/2, window.innerHeight/2, -walk_amount, walk_amount));
 
-            let shadow = ['--sgda_red', '--sgda_yellow', '--sgda_green', '--sgda_blue'];
+            let shadow = ['--dark-sapphire', '--jalapeno-red', '--mandarin-red', '--squash-blossom'];
 
             for (let i = 0; i < shadow.length; i++)
             {
@@ -56,3 +57,4 @@ function title()
         });
     }
 };
+*/
