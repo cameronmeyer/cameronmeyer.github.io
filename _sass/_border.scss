@@ -1,0 +1,25 @@
+@import '_colors';
+
+$box-shadow-x: .25rem;
+$box-shadow-y: .25rem;
+$box-shadow-x-hover: .1rem;
+$box-shadow-y-hover: .1rem;
+
+.border {
+    margin-right: $box-shadow-x*3;
+    margin-bottom: $box-shadow-y*3;
+    background-color: $clr-black;
+    border: 1px solid $clr-jalapeno-red;
+    box-shadow: $box-shadow-x $box-shadow-y $clr-jalapeno-red, $box-shadow-x*2 $box-shadow-y*2 $clr-mandarin-red, $box-shadow-x*3 $box-shadow-y*3 $clr-squash-blossom;
+    transition: box-shadow .25s ease-in-out;
+}
+
+.border:hover {
+    border: 1px solid $clr-jalapeno-red;
+    box-shadow: $box-shadow-x*1.5 $box-shadow-y*1.5 $clr-jalapeno-red, $box-shadow-x*3 $box-shadow-y*3 $clr-mandarin-red, $box-shadow-x*4.5 $box-shadow-y*4.5 $clr-squash-blossom;
+    transition: box-shadow .25s ease-in-out;
+
+    //border: 1px solid $clr-squash-blossom;
+    //box-shadow: $box-shadow-x-hover $box-shadow-y-hover $clr-squash-blossom;
+    //transform: translateX($box-shadow-x - $box-shadow-x-hover) translateY($box-shadow-y - $box-shadow-y-hover)
+}

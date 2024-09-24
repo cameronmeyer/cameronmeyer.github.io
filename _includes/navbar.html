@@ -3,13 +3,14 @@
         <div class="content">
             <div class="flex flex-column lg:flex-row items-center">
                 <div class="flex flex-row items-center lg:mr-auto w-full lg:w-auto">
-                    <!-- logo -->
+                    <!-- logo 
                     <div class="">
                         <a class="display-block py-4" href="/">
                             <img src="/assets/images/sgda_logo_horrizontal_letters-128.png" alt="UT Dallas SGDA Logo" class="logo">
                         </a>
-                    </div>
-                    
+                    </div>-->
+                    <h4 class="logo-shadow-cascade pt-1 pb-3"> CM </h4>
+
                     {% include burger.html id="nav-burger" class="ml-auto lg:display-none" %}
                 </div>
                 
@@ -17,7 +18,7 @@
                 <div class="links flex flex-column lg:flex-row items-center w-full lg:w-auto text-center overflow-hidden stateful" for="nav-burger">
                 {% assign i = 0 %}
                 {% for item in site.data.navigation %}
-                    <a class="link-{{ i | modulo: 4 | plus: 1}} w-full h-full lg:pl-4 py-3{% if page.title == item.title %} current-page{% endif %}" href="{{ item.link }}"> {{ item.title }} </a>
+                    <a class="link w-full h-full lg:pl-4 py-3{% if page.title == item.title %} current-page{% endif %}" href="{{ item.link }}"> {{ item.title }} </a>
                     {% assign i = i | plus: 1 %}
                 {% endfor %}
                     <div class="pt-4"></div>
