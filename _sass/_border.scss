@@ -1,0 +1,32 @@
+@import '_colors';
+
+$box-shadow-x: .25rem;
+$box-shadow-y: .25rem;
+$box-shadow-x-hover: .1rem;
+$box-shadow-y-hover: .1rem;
+
+.border, .border-button, a.border-button {
+    margin-right: $box-shadow-x*3;
+    margin-bottom: $box-shadow-y*3;
+    //color: $clr-white;
+    background-color: $clr-black;
+    border: .125rem solid $clr-jalapeno-red;
+    box-shadow: $box-shadow-x $box-shadow-y $clr-jalapeno-red, $box-shadow-x*2 $box-shadow-y*2 $clr-mandarin-red, $box-shadow-x*3 $box-shadow-y*3 $clr-squash-blossom;
+}
+
+.border-button {
+    transition: border .25s ease-in-out, box-shadow .25s ease-in-out;
+}
+
+.border-button img {
+    border: .125rem solid $clr-jalapeno-red;
+}
+
+.border-button:hover {
+    border: .125rem solid $clr-squash-blossom;
+    box-shadow: $box-shadow-x*1.5 $box-shadow-y*1.5 $clr-squash-blossom, $box-shadow-x*3 $box-shadow-y*3 $clr-mandarin-red, $box-shadow-x*4.5 $box-shadow-y*4.5 $clr-jalapeno-red;
+    transition: box-shadow .2s ease-in-out, border .2s ease-in-out;
+    //border: 1px solid $clr-squash-blossom;
+    //box-shadow: $box-shadow-x-hover $box-shadow-y-hover $clr-squash-blossom;
+    //transform: translateX($box-shadow-x - $box-shadow-x-hover) translateY($box-shadow-y - $box-shadow-y-hover)
+}

@@ -1,0 +1,91 @@
+@import "_colors";
+@import "includes/burger";
+
+nav.main {
+    position: fixed;
+    left: 0;
+    right: 0;
+    font-weight: 600;
+    z-index: 5;
+
+    @media (max-width: 991px) {
+        padding-bottom: 2px;
+        background-color: $clr-black;
+        //background: linear-gradient(90deg, $clr-jalapeno-red 0%, $clr-mandarin-red 33%, $clr-squash-blossom 50%, $clr-flat-flesh 90%);
+
+        a {
+            transition: background-color .1s;
+        }
+
+        a:hover {
+            background-color: darken($clr-black, 8);
+        }
+
+        .links {
+            max-height: 0;
+            transition: max-height .3s;
+        }
+
+        .links.active {
+            max-height: 13rem;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .content {
+            padding-bottom: 2px;
+            background-color: $clr-black;
+            background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
+            //background: linear-gradient(90deg, $clr-black 0%, $clr-dark-sapphire 10%, $clr-jalapeno-red 20%, $clr-mandarin-red 40%, $clr-squash-blossom 50%, $clr-mandarin-red 60%, $clr-jalapeno-red 80%, $clr-dark-sapphire 90%, $clr-black 100%);
+            //background: linear-gradient(90deg, $clr-black 0%, $clr-jalapeno-red 33%, $clr-mandarin-red 50%, $clr-squash-blossom 90%);
+
+            > * {
+                background-color: $clr-black;
+            }
+        }
+    }
+
+    .logo {
+        height: 1.75rem;
+        width: 4.8125rem;
+        object-fit: contain;
+    }
+
+
+    $link-darken: 20;
+
+    .link {
+        color: $clr-jalapeno-red;
+    }
+
+    .link:hover {
+        color: $clr-mandarin-red;
+    }
+
+    .current-page {
+        color: $clr-squash-blossom;
+        font-weight: bold;
+    }
+
+    .dot-1, .dot-2, .dot-3, .dot-4 {
+        width: .7rem;
+        height: .7rem;
+    }
+
+    .dot-1 {
+        background-color: $clr-dark-sapphire;
+        border: .075rem solid $clr-azraq-blue;
+    }
+
+    .dot-2 {
+        background-color: $clr-jalapeno-red;
+    }
+
+    .dot-3 {
+        background-color: $clr-mandarin-red;
+    }
+
+    .dot-4 {
+        background-color: $clr-squash-blossom;
+    }
+}
