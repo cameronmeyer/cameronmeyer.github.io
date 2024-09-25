@@ -1,0 +1,15 @@
+<head>
+    <link rel="_sass\_colors" href="_sass\_colors.css">
+</head>
+
+<div class="flex flex-row flex-wrap" style="gap: 1rem">
+    {% for project in site.data.projects %}
+    <a class="border-button border-radius-lg" style="flex: 1 1 40%; max-width: 50%" href="{{ project.link }}">
+        <div class="flex flex-column flex-grow pb-2 px-5 pt-5">
+            <h1 class="h-color mb-2" align="center"> {{project.name}} </h1>
+            <img class="border-radius-md mb-5" style="border: .125rem solid $clr-jalapeno-red" src="/assets/images/projects/{{project.image}}" alt="{{project.name}}" />
+            <p class="c-white mt-0 mb-2 font-lg" align="left"> {{project.description}} </p>
+        </div>
+    </a>
+    {% endfor %}
+</div>

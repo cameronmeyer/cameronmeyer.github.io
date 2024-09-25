@@ -11,14 +11,14 @@ nav.main {
     @media (max-width: 991px) {
         padding-bottom: 2px;
         background-color: $clr-black;
-        background: linear-gradient(90deg, $clr-jalapeno-red 0%, $clr-mandarin-red 33%, $clr-squash-blossom 50%, $clr-flat-flesh 90%);
+        //background: linear-gradient(90deg, $clr-jalapeno-red 0%, $clr-mandarin-red 33%, $clr-squash-blossom 50%, $clr-flat-flesh 90%);
 
         a {
             transition: background-color .1s;
         }
 
         a:hover {
-            background-color: darken($clr-dark-sapphire, 8);
+            background-color: darken($clr-black, 8);
         }
 
         .links {

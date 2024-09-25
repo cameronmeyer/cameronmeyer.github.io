@@ -1,22 +1,15 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-title: SGDA
-email: sgda.utd@gmail.com
+title: Cameron Meyer Portfolio
+email: cameron.meyer02@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  The official website of the Student Game Developer Association
-  at the University of Texas at Dallas.
-url: https://utdsgda.club # the base hostname & protocol of the site
-
-## Social media
-twitter_username: utdsgda
-github_username:  utd-sgda
-discord_link: https://discord.com/invite/Aae9Mhg
-mail_link: https://wordpress.us9.list-manage.com/subscribe?u=f921145fe669f08c3392649e5&id=c6d0adccd5
+  The technical art portfolio for developer Cameron Meyer.
+#url: https://utdsgda.club # the base hostname & protocol of the site
 
 ## Data variables
 footer_menu: footer # Storing footer.yml as a variable
-associated_companies: companies # Storing the companies.yml file as a variable
+#associated_companies: companies # Storing the companies.yml file as a variable
 
 ## Build settings
 plugins:

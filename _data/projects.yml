@@ -1,0 +1,49 @@
+# Used in _includes/projects.html component
+
+# - name:    Name of project or feature
+#   game:    Name of game feature is from (if applicable)
+#   image:   Project image
+#   description: Brief summary of project
+
+
+- name: Jellyfish Platform
+  game: Wayfinder
+  image: jellyfish.png
+  description: This is a jellyfish platform description.
+  link: /jellyfish/
+
+- name: Chests
+  game: Wayfinder
+  image: chests.png
+  description: This is a chests description. Ruins, mines, reaverwoods, mythic.
+  link: /chests/
+
+- name: Plants
+  game: Wayfinder
+  image: plants.png
+  description: This is a plants description. Avala flowers, hazard plant, hallucenogenic plant.
+  link: /plants/
+
+- name: Housing Items
+  game: Wayfinder
+  image: housing.png
+  description: This is a housing description. Doors, windows, dice trays, game board.
+  link: /housing/
+
+- name: Dyeable VFX
+  game: Wayfinder
+  image: dyevfx.png
+  description: This is a dyeable vfx description.
+  link: /dyeableVFX/
+
+- name: Auto Perf Tool
+  game: Wayfinder
+  image: autoperf.png
+  description: This is an auto perf description.
+  link: /autoperf/
+
+- name: Animal Crossing TCG
+  game: ACTCG
+  image: actcg.png
+  description: This is an ACTCG description. Cards, water, vfx.
+  link: /animalcrossingTCG/
