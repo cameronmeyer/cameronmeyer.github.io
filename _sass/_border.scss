@@ -5,7 +5,7 @@ $box-shadow-y: .25rem;
 $box-shadow-x-hover: .1rem;
 $box-shadow-y-hover: .1rem;
 
-.border, .border-button, a.border-button {
+.border, .border-button, div.border, a.border-button {
     margin-right: $box-shadow-x*3;
     margin-bottom: $box-shadow-y*3;
     //color: $clr-white;

@@ -8,7 +8,7 @@
 
 - name: Jellyfish Platform
   game: Wayfinder
-  image: jellyfish.png
+  image: jellyfish.gif
   description: This is a jellyfish platform description.
   link: /jellyfish/
 
