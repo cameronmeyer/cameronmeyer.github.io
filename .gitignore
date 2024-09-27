@@ -5,3 +5,8 @@ _site
 vendor
 .vs/slnx.sqlite
 .vsidx
+jekyll-redirect-from/
+jekyll-seo-tag/
+wdm/
+webrick/
+/.vs
