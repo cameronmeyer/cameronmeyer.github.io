@@ -1,0 +1,16 @@
+.merch-item
+{
+    $item-max-width: 17rem;
+    max-width: $item-max-width;
+    
+    img
+    {
+        max-width: $item-max-width;
+        object-fit: contain;
+    }
+    
+    hr
+    {
+        height: 1px;
+    }
+}
