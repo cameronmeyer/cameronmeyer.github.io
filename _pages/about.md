@@ -8,7 +8,8 @@ description: Welcome to the UT Dallas SGDA site. We make and play games!
 
 {% include title-animated.html text="About Me" text-small="About" %}
 
-<div class="border flex flex-row border-radius-lg">
+<div>
+<div class="border flex flex-row border-radius-lg" style="max-width: 100%">
     <div class="flex flex-column items-center align-center self-center flex-noshrink pb-2 px-5 pt-5">
         <h1 class="mx-0 mt-2 mb-0 font-2xl line-1 c-white">Cameron Meyer</h1>
         <p class="mt-0 mb-2 font-lg c-white">Technical Artist</p>
@@ -40,6 +41,7 @@ description: Welcome to the UT Dallas SGDA site. We make and play games!
             When I'm not developing games, you may find me playing titles like The Last of Us, Breath of the Wild, or Hyper Light Drifter.
         </p>
     </div>
+</div>
 </div>
 
 ---
