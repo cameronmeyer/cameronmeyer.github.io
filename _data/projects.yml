@@ -14,7 +14,7 @@
 
 - name: Chests
   game: Wayfinder
-  image: chests.png
+  image: chests.gif
   description: This is a chests description. Ruins, mines, reaverwoods, mythic.
   link: /chests/
 

@@ -9,7 +9,7 @@ nav.main {
     z-index: 5;
 
     @media (max-width: 991px) {
-        padding-bottom: 2px;
+        //padding-bottom: 2px;
         background-color: $clr-black;
         //background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
 
@@ -33,9 +33,9 @@ nav.main {
 
     @media (min-width: 992px) {
         .content {
-            padding-bottom: 2px;
+            //padding-bottom: .15rem;
             background-color: $clr-black;
-            background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
+            //background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
 
             > * {
                 background-color: $clr-black;
@@ -43,12 +43,17 @@ nav.main {
         }
     }
 
+    .gradient-line {
+        height: .15rem;
+        border-radius: 3px;
+        background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
+    }
+
     .logo {
         height: 1.75rem;
         width: 4.8125rem;
         object-fit: contain;
     }
-
 
     $link-darken: 20;
 
