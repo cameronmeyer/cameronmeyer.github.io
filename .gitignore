@@ -3,10 +3,12 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+/.vs
+/.vs/cameronmeyer.github.io
 .vs/slnx.sqlite
 .vsidx
 jekyll-redirect-from/
 jekyll-seo-tag/
 wdm/
 webrick/
-/.vs
+.wsuo

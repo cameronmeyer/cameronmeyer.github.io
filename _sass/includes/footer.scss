@@ -1,45 +1,36 @@
 @import "_colors";
 
-footer.main
-{
-    @media (max-width: 991px)
-    {
+footer.main {
+    @media (max-width: 991px) {
         padding-top: 2px;
-        background-color: $clr-sgda-yellow;
-        background: linear-gradient(90deg, $clr-sgda-red 0%, $clr-sgda-yellow 33%, $clr-sgda-green 50%, $clr-sgda-blue 90%);
+        background-color: $clr-black;
+        //background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
 
-        a
-        {
+        a {
             transition: background-color .1s;
         }
 
-        a:hover
-        {
-            background-color: darken($clr-sgda-darkgrey, 8);
+        a:hover {
+            background-color: darken($clr-black, 8);
         }
 
-        .links
-        {
+        .links {
             max-height: 0;
             transition: max-height .3s;
         }
-        
-        .links.active
-        {
-            max-height: 10rem;
+
+        .links.active {
+            max-height: 13rem;
         }
     }
 
-    @media (min-width: 992px)
-    {
-        .content
-        {
+    @media (min-width: 992px) {
+        .content {
             padding-top: 2px;
-            background-color: $clr-sgda-yellow;
-            background: linear-gradient(90deg, $clr-sgda-red 0%, $clr-sgda-yellow 33%, $clr-sgda-green 50%, $clr-sgda-blue 90%);
+            background-color: $clr-black;
+            background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
 
-            > *
-            {
+            > * {
                 background-color: $clr-black;
             }
         }

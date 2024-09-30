@@ -11,7 +11,7 @@ nav.main {
     @media (max-width: 991px) {
         padding-bottom: 2px;
         background-color: $clr-black;
-        //background: linear-gradient(90deg, $clr-jalapeno-red 0%, $clr-mandarin-red 33%, $clr-squash-blossom 50%, $clr-flat-flesh 90%);
+        //background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
 
         a {
             transition: background-color .1s;
@@ -36,8 +36,6 @@ nav.main {
             padding-bottom: 2px;
             background-color: $clr-black;
             background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
-            //background: linear-gradient(90deg, $clr-black 0%, $clr-dark-sapphire 10%, $clr-jalapeno-red 20%, $clr-mandarin-red 40%, $clr-squash-blossom 50%, $clr-mandarin-red 60%, $clr-jalapeno-red 80%, $clr-dark-sapphire 90%, $clr-black 100%);
-            //background: linear-gradient(90deg, $clr-black 0%, $clr-jalapeno-red 33%, $clr-mandarin-red 50%, $clr-squash-blossom 90%);
 
             > * {
                 background-color: $clr-black;
