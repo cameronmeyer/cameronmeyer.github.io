@@ -25,4 +25,4 @@ This is a page about jellyfish platforms. It's a very good page. It will discuss
 	- Lower bound offset cap
 	- Visuals and hitboxes identical between players
 
-<img class="border-radius-md mb-5" style="border: .125rem solid $clr-jalapeno-red" src="/assets/images/projects/jellyfish_jump.gif" alt="Jellyfish Jump" />
+<img class="border-image mb-5" src="/assets/images/projects/jellyfish_jump.gif" alt="Jellyfish Jump" />

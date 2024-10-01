@@ -1,32 +1,36 @@
 @import '_colors';
 
+$box-border: .2rem;
 $box-shadow-x: .25rem;
 $box-shadow-y: .25rem;
 $box-shadow-x-hover: .1rem;
 $box-shadow-y-hover: .1rem;
 
-.border, .border-button, .border-image div.border, a.border-button {
-    margin-right: $box-shadow-x*3;
-    margin-bottom: $box-shadow-y*3;
+.border, .border-button, a.border-button, .border-image, .border-image-circle, .border-plain {
     //color: $clr-white;
     background-color: $clr-black;
-    border: .2rem solid $clr-jalapeno-red;
+    border: $box-border solid $clr-jalapeno-red;
 }
 
-.border, .border-image {
+.border, .border-image, .border-image-circle {
+    margin-right: $box-shadow-x*3;
+    margin-bottom: $box-shadow-y*3;
     box-shadow: $box-shadow-x $box-shadow-y $clr-jalapeno-red, $box-shadow-x*2 $box-shadow-y*2 $clr-mandarin-red, $box-shadow-x*3 $box-shadow-y*3 $clr-squash-blossom;
 }
 
 .border-button {
+    margin-right: $box-shadow-x*4.5;
+    margin-bottom: $box-shadow-y*4.5;
     transition: border .2s ease-in-out, box-shadow .25s ease-in-out;
 }
 
 .border-button img {
-    border: .2rem solid $clr-jalapeno-red;
+    border: $box-border solid $clr-jalapeno-red;
+    border-radius: .5rem;
 }
 
 .border-button:hover {
-    border: .2rem solid $clr-squash-blossom;
+    border: $box-border solid $clr-squash-blossom;
     box-shadow: $box-shadow-x*1.5 $box-shadow-y*1.5 $clr-squash-blossom, $box-shadow-x*3 $box-shadow-y*3 $clr-mandarin-red, $box-shadow-x*4.5 $box-shadow-y*4.5 $clr-jalapeno-red;
     transition: box-shadow .2s ease-in-out, border .2s ease-in-out;
     //border: 1px solid $clr-squash-blossom;
@@ -35,7 +39,10 @@ $box-shadow-y-hover: .1rem;
 }
 
 .border-image {
-    border: .2rem solid $clr-jalapeno-red;
+    border-radius: .5rem;
+}
+
+.border-image-circle {
     border-radius: 50%;
     //box-shadow: $box-shadow-x*1.5 $box-shadow-y*1.5 $clr-squash-blossom, $box-shadow-x*3 $box-shadow-y*3 $clr-mandarin-red, $box-shadow-x*4.5 $box-shadow-y*4.5 $clr-jalapeno-red;
 }
