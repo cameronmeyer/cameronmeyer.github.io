@@ -13,8 +13,8 @@ description: Welcome to the UT Dallas SGDA site. We make and play games!
     <div class="flex flex-column items-center align-center self-center flex-noshrink pb-2 px-5 pt-5">
         <h1 class="mx-0 mt-2 mb-0 font-2xl line-1 c-white">Cameron Meyer</h1>
         <p class="mt-0 mb-2 font-lg c-white">Technical Artist</p>
-        <img class="border-image mb-5" src="/assets/images/cameron.JPG" alt="Cameron's Portrait" style="width: 13rem; height: 13rem;"/>
-        <a class="mb-3" href="https://www.linkedin.com/in/cameron-meyer/">
+        <img class="border-image-circle mb-5" src="/assets/images/cameron.JPG" alt="Cameron's Portrait" style="width: 13rem; height: 13rem;"/>
+        <a class="mt-3 mb-3" href="https://www.linkedin.com/in/cameron-meyer/">
             <i class="icon-linkedin"></i>
             View Profile
         </a>
