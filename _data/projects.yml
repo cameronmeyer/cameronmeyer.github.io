@@ -8,13 +8,15 @@
 
 - name: Jellyfish Platform
   game: Wayfinder
-  image: jellyfish.gif
+  image: 
+  video: jellyfish-test.mp4
   description: This is a jellyfish platform description.
   link: /jellyfish/
 
 - name: Chests
   game: Wayfinder
-  image: chests.gif
+  image: 
+  video: Chests/AllChests.mp4
   description: This is a chests description. Ruins, mines, reaverwoods, mythic.
   link: /chests/
 

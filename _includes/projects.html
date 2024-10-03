@@ -7,14 +7,24 @@
         <a class="border-button border-radius-lg" style="flex: 1 1 40%; max-width: 50%" href="{{ project.link }}">
             <div class="flex flex-column flex-grow pb-2 px-5 pt-5">
                 <h1 class="h-color mb-2" align="center"> {{project.name}} </h1>
-                <img class="border-radius-md mb-5" src="/assets/images/projects/{{project.image}}" alt="{{project.name}}" />
+                {% if project.image %}
+                    <img class="border-radius-md mb-5" src="/assets/images/projects/{{project.image}}" alt="{{project.name}}" />
+                {% else %}
+                    {% if project.video %}
+                        <video class="border-plain border-radius-md mb-5" style="border-radius: .5rem" autoplay muted controls loop>
+                            <source src="/assets/images/projects/{{project.video}}" type="video/mp4">
+                        </video>
+                    {% endif %}
+                {% endif %}
                 <p class="c-white mt-0 mb-2 font-lg" align="left"> {{project.description}} </p>
             </div>
         </a>
 
-        <!-- ONLY FOR ODD AMOUNTS OF PROJECTS -->
+        <!-- Insert empty div to help with spacing (only for odd amounts of projects) -->
         {% if forloop.last == true %}
-            <div class="flex" style="flex: 1 1 40%; max-width: 50%; margin-right: .9rem; margin-bottom: .9rem"></div>
+            {% if site.data.projects % 2 != 0 %}
+                <div class="flex" style="flex: 1 1 40%; max-width: 50%; margin-right: .9rem; margin-bottom: .9rem"></div>
+            {% endif %}
         {% endif %}
     {% endfor %}
 </div>
