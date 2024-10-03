@@ -1,10 +1,13 @@
 - title: Home
   link: /
+
 - title: About
   link: /about/
-- title: Events
-  link: /events/
-- title: Merch
-  link: /merch/
-- title: Jams
-  link: /jams/
+
+- title: Projects
+  link: 
+  subitems:
+  - title: Jellyfish
+    link: /jellyfish/
+  - title: Chests
+    link: /chests/

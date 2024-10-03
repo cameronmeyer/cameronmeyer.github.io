@@ -10,10 +10,21 @@
 
                 <!-- links -->
                 <div class="links flex flex-column lg:flex-row items-center w-full lg:w-auto text-center overflow-hidden stateful" for="nav-burger">
-                    {% assign i = 0 %}
                     {% for item in site.data.navigation %}
-                    <a class="link w-full h-full lg:pl-4 py-3{% if page.title == item.title %} current-page{% endif %}" href="{{ item.link }}"> {{ item.title }} </a>
-                    {% assign i = i | plus: 1 %}
+                        {% if item.subitems %}
+                            <!-- base of hover dropdown -->
+                            <div class="dropdown w-full h-full lg:pl-4 py-3 ">
+                                <p class="dropbtn">{{item.title}}</p>
+                                <div class="dropdown-content">
+                                {% for subitem in item.subitems %}
+                                    <!-- items of hover dropdown -->
+                                    <a class="link {% if page.title == subitem.title %} current-page {% endif %}" href="{{ subitem.link }}"> {{ subitem.title }} </a>
+                                {% endfor %}
+                                </div>
+                            </div>
+                        {% else %}
+                            <a class="link w-full h-full lg:pl-4 py-3 {% if page.title == item.title %} current-page {% endif %}" href="{{ item.link }}"> {{ item.title }} </a>
+                        {% endif %}
                     {% endfor %}
                     <div class="pt-4"></div>
                 </div>

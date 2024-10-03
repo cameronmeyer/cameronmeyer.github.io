@@ -9,6 +9,7 @@ function map(current, in_min, in_max, out_min, out_max)
     return clamp(mapped, out_min, out_max);
 }
 
+/*
 if(window.addEventListener)
 {
     window.addEventListener('load', title);
@@ -17,6 +18,7 @@ else
 {
     window.attachEvent('onload', title);
 }
+*/
 
 /*
 function title()
