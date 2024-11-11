@@ -51,17 +51,20 @@ nav.main {
     /* The container <div> - needed to position the dropdown content */
     .dropdown {
         position: relative;
-        display: block;
+        display: grid;
     }
     /* Dropdown Content (Hidden by Default) */
     .dropdown-content {
         display: none;
         position: absolute;
+        justify-self: center;
+        top: 80%;
         background-color: $clr-black;
-        border: .075rem solid $clr-mandarin-red;
+        border: .2rem solid $clr-mandarin-red;
         border-radius: .5rem;
         padding: .25rem;
-        //min-width: 5rem;
+        margin: .25rem;
+        min-width: 8rem;
     }
     /* Links inside the dropdown */
     .dropdown-content a {
@@ -71,14 +74,14 @@ nav.main {
         margin-top: .5rem;
         text-decoration: none;
         display: block;
-        border: .075rem solid $clr-black;
+        border: .15rem solid $clr-black;
         transition: border .25s;
     }
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover {
         color: $clr-mandarin-red;
         border-radius: .5rem;
-        border: .075rem solid $clr-mandarin-red;
+        border: .15rem solid $clr-mandarin-red;
     }
     /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {
