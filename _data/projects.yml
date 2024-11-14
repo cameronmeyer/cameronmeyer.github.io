@@ -9,7 +9,7 @@
 - name: Jellyfish Platform
   game: Wayfinder
   image: 
-  video: jellyfish-test.mp4
+  video: jellyfish.mp4
   description: This is a jellyfish platform description.
   link: /jellyfish/
 

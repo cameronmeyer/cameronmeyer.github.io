@@ -25,4 +25,23 @@ This is a page about jellyfish platforms. It's a very good page. It will discuss
 	- Lower bound offset cap
 	- Visuals and hitboxes identical between players
 
-<img class="border-image mb-5" src="/assets/images/projects/jellyfish_jump.gif" alt="Jellyfish Jump" />
+---
+
+{% assign path = "/assets/images/projects/Jellyfish/" %}
+
+<div class="ignore content-wrapper">
+    <div class="content flex flex-column items-center">
+        <video class="border-plain overflow-hidden w-full mb-5" style="border-radius: .5rem" autoplay muted controls loop>
+            <source src="{{path}}JellyfishElevator.mp4" type="video/mp4">
+        </video>
+		<video class="border-plain overflow-hidden w-full mb-5" style="border-radius: .5rem" autoplay muted controls loop>
+            <source src="{{path}}JellyfishMultiplayerSpectator.mp4" type="video/mp4">
+        </video>
+		<video class="border-plain overflow-hidden w-full mb-5" style="border-radius: .5rem" autoplay muted controls loop>
+            <source src="{{path}}JellyfishMultiplayerSpectator2.mp4" type="video/mp4">
+        </video>
+		<video class="border-plain overflow-hidden w-full mb-5" style="border-radius: .5rem" autoplay muted controls loop>
+            <source src="{{path}}JellyfishMultiplayerGameplay.mp4" type="video/mp4">
+        </video>
+    </div>
+</div>
