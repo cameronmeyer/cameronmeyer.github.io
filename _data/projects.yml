@@ -34,7 +34,8 @@
 
 - name: Dyeable VFX
   game: Wayfinder
-  image: dyevfx.png
+  image: 
+  video: DyeVFX/dyevfx.mp4
   description: This is a dyeable vfx description.
   link: /dyeableVFX/
 
