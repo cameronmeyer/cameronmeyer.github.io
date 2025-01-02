@@ -2,39 +2,39 @@
     <div class="content-wrapper bg-black">
         <div class="content">
             <div class="flex flex-column lg:flex-row items-center">
-                <div class="flex flex-row items-center lg:mr-auto w-full lg:w-auto">
-                    <h4 class="logo-shadow-cascade pt-1 pb-3"> CM </h4>
+                <div class="flex flex-row items-center lg:mr-auto w-full">
+                    <a class="pt-1" href="/">
+                        <img src="/assets/images/favicon-256.png" alt="Home" style=" transform-origin: left; max-width: 19.53125%;"/>
+                    </a>
 
-                    {% include burger.html id="nav-burger" class="ml-auto lg:display-none" %}
-                </div>
-
-                <!-- links -->
-                <div class="links flex flex-column lg:flex-row justify-start w-full lg:w-auto text-center stateful" for="nav-burger">
-                    {% for item in site.data.navigation %}
+                    <!-- links -->
+                    <div class="links flex flex-column lg:flex-row justify-start w-full lg:w-auto text-center stateful" style="position:absolute; left: 50%; transform: translateX(-50%);" for="nav-burger">
+                        {% for item in site.data.navigation %}
                         {% if item.subitems %}
-                            <!-- base of hover dropdown -->
-                            <div class="dropdown items-center lg:m-4 py-3 ">
-                                <p class="dropbtn">{{item.title}}</p>
-                                <div class="flex flex-column w-full lg:w-auto border-plain dropdown-content">
+                        <!-- base of hover dropdown -->
+                        <div class="dropdown items-center lg:m-2 py-3">
+                            <p class="dropbtn">{{item.title}}</p>
+                            <div class="flex flex-column w-full lg:w-auto border-plain dropdown-content">
                                 {% for subitem in item.subitems %}
-                                    <!-- items of hover dropdown -->
-                                    <a class="link h-full px-4 {% if page.title == subitem.title %} current-page {% endif %}" href="{{ subitem.link }}"> {{ subitem.title }} </a>
+                                <!-- items of hover dropdown -->
+                                <a class="link {% if page.title == subitem.title %} current-page {% endif %}" style="margin-top: 0.125rem;" href="{{ subitem.link }}"> {{ subitem.title }} </a>
                                 {% endfor %}
-                                </div>
                             </div>
+                        </div>
                         {% else %}
-                            <a class="link w-full lg:m-4 py-3 {% if page.title == item.title %} current-page {% endif %}" href="{{ item.link }}"> {{ item.title }} </a>
+                        <a class="link w-full lg:m-2 py-3 {% if page.title == item.title %} current-page {% endif %}" href="{{ item.link }}"> {{ item.title }} </a>
                         {% endif %}
-                    {% endfor %}
-                    <div class="pt-4"></div>
-                </div>
+                        {% endfor %}
+                        <div class="pt-4"></div>
+                    </div>
 
-                <!-- dots row -->
-                <div class="ml-auto lg:flex flex-row display-none">
-                    <div class="dot-1 border-radius-full"></div>
-                    <div class="dot-2 border-radius-full ml-2"></div>
-                    <div class="dot-3 border-radius-full ml-2"></div>
-                    <div class="dot-4 border-radius-full ml-2"></div>
+                    <!-- dots row -->
+                    <div class="ml-auto lg:flex flex-row display-none">
+                        <div class="dot-1 border-radius-full"></div>
+                        <div class="dot-2 border-radius-full ml-2"></div>
+                        <div class="dot-3 border-radius-full ml-2"></div>
+                        <div class="dot-4 border-radius-full ml-2"></div>
+                    </div>
                 </div>
             </div>
             <div class="gradient-line"></div>
