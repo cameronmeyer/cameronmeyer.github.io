@@ -78,11 +78,19 @@ nav.main {
         transition: border .25s;
     }
     /* Change color of dropdown links on hover */
-    .dropdown-content a:hover {
+    .dropdown-content a:hover, .dropdown-content a.current-page:hover {
         color: $clr-mandarin-red;
         border-radius: .5rem;
         border: .15rem solid $clr-mandarin-red;
     }
+
+    /* Change color of dropdown link if it is the current page */
+    .dropdown-content a.current-page {
+        color: $clr-squash-blossom;
+        font-weight: bold;
+        transition: color .25s, font-weight .25s;
+    }
+
     /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {
         display: block;

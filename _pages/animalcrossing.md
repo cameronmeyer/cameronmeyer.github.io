@@ -2,7 +2,7 @@
 permalink: /animalcrossingTCG/
 layout: default
 
-title: Animal Crossing Trading Card Game
+title: Animal Crossing TCG
 description: Welcome to the ACTCG page.
 ---
 
