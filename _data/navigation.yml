@@ -11,10 +11,8 @@
     link: /jellyfish/
   - title: Chests
     link: /chests/
-  - title: Plants
-    link: /plants/
-  - title: Housing
-    link: /housing/
+  - title: Interactables
+    link: /interactables/
   - title: Dyeable VFX
     link: /dyeableVFX/
   - title: Auto Perf

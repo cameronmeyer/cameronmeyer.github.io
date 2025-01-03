@@ -20,17 +20,11 @@
   description: This is a chests description. Ruins, mines, reaverwoods, mythic.
   link: /chests/
 
-- name: Plants
+- name: Interactables
   game: Wayfinder
   image: plants.png
-  description: This is a plants description. Avala flowers, hazard plant, hallucenogenic plant.
-  link: /plants/
-
-- name: Housing Items
-  game: Wayfinder
-  image: housing.png
-  description: This is a housing description. Doors, windows, dice trays, game board.
-  link: /housing/
+  description: This is an interactables description. Avala flowers, hazard plant, hallucenogenic plant, doors, windows, dice trays, game board.
+  link: /interactables/
 
 - name: Dyeable VFX
   game: Wayfinder

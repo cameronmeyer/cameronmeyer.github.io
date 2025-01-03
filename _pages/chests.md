@@ -10,7 +10,21 @@ description: Welcome to the chests page.
 
 # Hello Chests
 
-This is a page about chests.
+This is a page about chests. It's a very good page. It will discuss the following:
+- All Chests:
+	- Boss Chest
+    - Ruins Chest
+        - Shader animation - ball rotation (or was that animated?) and panning emissive on parts of mesh
+    - Mines Chest
+        - Shader animation - liquid draining
+    - Reaverwoods Chest
+    - Eldren Chest
+        - Shader animation - orb activating/dispersing
+- Features:
+    - synced animations, sounds, and vfx with timelines
+    - custom shader animation
+    - custom anim graph
+    - done with BP logic
 
 {% assign path = "/assets/images/projects/Chests/" %}
 

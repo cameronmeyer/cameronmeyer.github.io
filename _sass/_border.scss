@@ -24,9 +24,28 @@ $box-shadow-y-hover: .1rem;
     transition: border .2s ease-in-out, box-shadow .25s ease-in-out;
 }
 
-.border-button img {
-    border: $box-border solid $clr-jalapeno-red;
-    border-radius: .5rem;
+.border-button {
+    img, video {
+        border: $box-border solid $clr-jalapeno-red;
+        border-radius: .5rem;
+        transition: border .2s ease-in-out;
+    }
+
+    h1 {
+        transition: color .2s ease-in-out;
+    }
+}
+
+.border-button:hover {
+    img, video {
+        border: $box-border solid $clr-squash-blossom;
+        transition: border .2s ease-in-out;
+    }
+
+    h1 {
+        color: $clr-squash-blossom;
+        transition: color .2s ease-in-out;
+    }
 }
 
 .border-button:hover {

@@ -1,16 +1,28 @@
 ---
-permalink: /plants/
+permalink: /interactables/
 layout: default
 
-title: Plants
+title: Interactables
 description: Welcome to the plants page.
 ---
 
 
 
-# Hello Plants
+# Hello Interactables
 
 This is a page about plants.
+
+- Eldren Key/Cache:
+    - Custom emissive anim on cache
+    - Synced with key insertion via timeline to showcase activation
+    - Collision updates as key is removed/added and forcefield activates around cache
+- Flashbang Mushrooms:
+    - Idle pulsing
+    - Custom anim graph
+    - Shader animation (idle and activated)
+- Hallucinogenic Mushrooms:
+    - Shader animation when activated
+    - Custom anim graph
 
 ---
 
