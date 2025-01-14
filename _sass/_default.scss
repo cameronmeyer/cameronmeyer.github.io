@@ -149,6 +149,16 @@ button
     border: none;
 }
 
+.stack {
+    display: grid;
+}
+
+.stack > * {
+    grid-row: 1;
+    grid-column: 1;
+    overflow: hidden;
+}
+
 // raisincss extension
 .h-fit
 {
@@ -172,6 +182,12 @@ button
     {
         max-width: 50%;
     }
+}
+
+.title-image {
+    //display: grid;
+    justify-self: center;
+    max-height: 67.5%;
 }
 
 // colors

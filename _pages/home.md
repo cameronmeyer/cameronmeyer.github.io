@@ -4,15 +4,10 @@ title: Home
 description: Welcome to my portfolio website!
 ---
 
-<div class="ignore content-wrapper">
-    <div class="content flex flex-column items-center">
-        <h1 class="logo-shadow-cascade text-center"> CAMERON <br> MEYER </h1>
-        
-        <h1 class="subtitle mt-0 mb-8 lg:mb-4 text-center"> TECHNICAL ARTIST </h1>
-    </div>
+<div class="content stack items-center">
+    <object data="/assets/images/Bars_Logo.svg" type="image/svg+xml"></object>
+    <object data="/assets/images/CameronMeyer_Logo.svg" type="image/svg+xml"></object>  
 </div>
-
----
 
 # First in class among tech artists named Cameron
 

@@ -3,33 +3,44 @@
         <div class="content">
             <div class="flex flex-column lg:flex-row items-center">
                 <div class="flex flex-row items-center lg:mr-auto w-full">
-                    <a class="pt-1" href="/">
-                        <img src="/assets/images/favicon-256.png" alt="Home" style=" transform-origin: left; max-width: 19.53125%;"/>
+                    <!-- left aligned -->
+                    <a class="w-full pt-1" alt="Home" style="transform-origin: left; max-width: 6%;" href="/">
+                        <!-- <img src="/assets/images/favicon-256.png" alt="Home" style=" transform-origin: left; max-width: 19.53125%;" /> -->
+                        <object data="/assets/images/CM_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
                     </a>
 
-                    <!-- links -->
-                    <div class="links flex flex-column lg:flex-row justify-start w-full lg:w-auto text-center stateful" style="position:absolute; left: 50%; transform: translateX(-50%);" for="nav-burger">
+                    <!-- links (center aligned)-->
+                    <div class="flex flex-column lg:flex-row lg:w-full text-center stateful" style="max-width: 40%; margin: auto;" for="nav-burger">
                         {% for item in site.data.navigation %}
-                        {% if item.subitems %}
-                        <!-- base of hover dropdown -->
-                        <div class="dropdown items-center lg:m-2 py-3">
-                            <p class="dropbtn">{{item.title}}</p>
-                            <div class="flex flex-column w-full lg:w-auto dropdown-content">
-                                {% for subitem in item.subitems %}
-                                <!-- items of hover dropdown -->
-                                <a class="link {% if page.title == subitem.title %} current-page {% endif %}" style="margin-top: 0.125rem;" href="{{ subitem.link }}"> {{ subitem.title }} </a>
-                                {% endfor %}
-                            </div>
-                        </div>
-                        {% else %}
-                        <a class="link w-full lg:m-2 py-3 {% if page.title == item.title %} current-page {% endif %}" href="{{ item.link }}"> {{ item.title }} </a>
-                        {% endif %}
+                            {% if item.subitems %}
+                                <!-- base of Projects hover dropdown -->
+                                <div class="dropdown w-full items-center lg:m-2 py-3">
+                                    <object data="/assets/images/Projects_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                                    <div class="flex flex-column w-full lg:w-auto dropdown-content">
+                                        {% for subitem in item.subitems %}
+                                            <!-- items of hover dropdown -->
+                                            <a class="link {% if page.title == subitem.title %} current-page {% endif %}" style="margin-top: 0.125rem;" href="{{ subitem.link }}"> {{ subitem.title }} </a>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            {% else %}
+                                {% if item.title == "Home" %}
+                                    <a class="link w-full lg:m-2 py-3 {% if page.title == item.title %} current-page {% endif %}" href="{{ item.link }}">
+                                        <object data="/assets/images/Home_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                                    </a>
+                                {% endif %}
+                                {% if item.title == "About" %}
+                                    <a class="link w-full lg:m-2 py-3 {% if page.title == item.title %} current-page {% endif %}" href="{{ item.link }}">
+                                        <object data="/assets/images/About_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                                    </a>
+                                {% endif %}
+                            {% endif %}
                         {% endfor %}
                         <div class="pt-4"></div>
                     </div>
 
-                    <!-- dots row -->
-                    <div class="ml-auto lg:flex flex-row display-none">
+                    <!-- dots row (right aligned) -->
+                    <div class="lg:flex flex-row display-none">
                         <div class="dot-1 border-radius-full"></div>
                         <div class="dot-2 border-radius-full ml-2"></div>
                         <div class="dot-3 border-radius-full ml-2"></div>
@@ -37,7 +48,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gradient-line"></div>
+            <object data="/assets/images/Bars.svg" type="image/svg+xml"></object>
         </div>
     </div>
 </nav>
