@@ -18,8 +18,8 @@ body
     font-style: normal;
     line-height: 1.5;
 
-    color: $clr-white;
-    background-color: $clr-black;
+    color: $clr-dark-sapphire;
+    background-color: $clr-cream;
     //background: url('/assets/images/TileablePatternBlack-168.png') repeat;
     
     padding: 0;
@@ -43,8 +43,8 @@ h1, h2, h3, h4, h5, h6
     //margin-bottom: .75rem;
 }
 
-p
-{
+p {
+    color: $clr-dark-sapphire;
     margin: .75rem 0;
 }
 
@@ -54,7 +54,7 @@ hr
     margin: 2rem 0 3rem;
 
     border: none;
-    background-color: $clr-darkwhite;
+    background-color: $clr-dark-sapphire;
     border-radius: 3px;
 }
 
@@ -85,7 +85,7 @@ $max-width: 900px;
 // changes text color with each occurance of h1 on page
 main.children-are-content {
     > h1, .h-color {
-        color: $clr-mandarin-red;
+        color: $clr-jalapeno-red;
     }
     /*> h1:nth-of-type(2n), .h-color:nth-of-type(2n) {
         color: $clr-livid;
@@ -108,20 +108,19 @@ main > hr:last-child
 }
 
 // default links
-a, a:visited, a:focus {
+a, a:visited, a:focus, a > p {
     text-decoration: none;
     color: $clr-livid;
     transition: color .15s;
 }
 
-a:hover {
+a:hover, a:hover > p {
     text-decoration: none;
     color: $clr-squash-blossom;
 }
 
 a.button {
     background-color: $clr-livid;
-    color: $clr-dark-sapphire;
     padding: .5rem 1rem;
     transition: all .1s;
     border-radius: 3px;

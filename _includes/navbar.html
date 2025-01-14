@@ -1,5 +1,5 @@
 <nav class="main line-1">
-    <div class="content-wrapper bg-black">
+    <div class="content-wrapper">
         <div class="content">
             <div class="flex flex-column lg:flex-row items-center">
                 <div class="flex flex-row items-center lg:mr-auto w-full">
@@ -14,7 +14,7 @@
                         <!-- base of hover dropdown -->
                         <div class="dropdown items-center lg:m-2 py-3">
                             <p class="dropbtn">{{item.title}}</p>
-                            <div class="flex flex-column w-full lg:w-auto border-plain dropdown-content">
+                            <div class="flex flex-column w-full lg:w-auto dropdown-content">
                                 {% for subitem in item.subitems %}
                                 <!-- items of hover dropdown -->
                                 <a class="link {% if page.title == subitem.title %} current-page {% endif %}" style="margin-top: 0.125rem;" href="{{ subitem.link }}"> {{ subitem.title }} </a>

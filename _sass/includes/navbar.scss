@@ -10,7 +10,7 @@ nav.main {
 
     @media (max-width: 991px) {
         //padding-bottom: 2px;
-        background-color: $clr-black;
+        background-color: $clr-cream;
         //background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
 
         a {
@@ -18,7 +18,7 @@ nav.main {
         }
 
         a:hover {
-            background-color: darken($clr-black, 8);
+            background-color: darken($clr-cream, 8);
         }
 
         .links {
@@ -34,11 +34,11 @@ nav.main {
     @media (min-width: 992px) {
         .content {
             //padding-bottom: .15rem;
-            background-color: $clr-black;
+            background-color: $clr-cream;
             //background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
 
             > * {
-                background-color: $clr-black;
+                background-color: $clr-cream;
             }
         }
     }
@@ -59,8 +59,8 @@ nav.main {
         position: absolute;
         justify-self: center;
         top: 80%;
-        background-color: $clr-black;
-        border: .2rem solid $clr-mandarin-red;
+        background-color: $clr-jalapeno-red;
+        //border: .2rem solid $clr-mandarin-red;
         border-radius: .5rem;
         padding: .25rem;
         margin: .25rem;
@@ -68,29 +68,28 @@ nav.main {
     }
     /* Links inside the dropdown */
     .dropdown-content a {
-        color: $clr-jalapeno-red;
+        color: $clr-white;
         border-radius: .5rem;
         padding: .25rem .5rem .25rem .5rem;
         margin-top: .5rem;
         text-decoration: none;
         display: block;
-        border: .15rem solid $clr-black;
+        //border: .15rem solid $clr-black;
         transition: border .25s;
     }
     /* Change color of dropdown links on hover */
     .dropdown-content a:hover, .dropdown-content a.current-page:hover {
-        color: $clr-mandarin-red;
+        color: $clr-white;
         border-radius: .5rem;
-        border: .15rem solid $clr-mandarin-red;
+        background-color: $clr-mandarin-red;
+        //border: .15rem solid $clr-mandarin-red;
     }
-
     /* Change color of dropdown link if it is the current page */
     .dropdown-content a.current-page {
         color: $clr-squash-blossom;
         font-weight: bold;
         transition: color .25s, font-weight .25s;
     }
-
     /* Show the dropdown menu on hover */
     .dropdown:hover .dropdown-content {
         display: block;
