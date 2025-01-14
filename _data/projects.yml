@@ -10,37 +10,37 @@
   game: Wayfinder
   image: 
   video: jellyfish.mp4
-  description: This is a jellyfish platform description.
+  description: Part bouncy platform, part mythical creature in Wayfinder.
   link: /jellyfish/
 
 - name: Chests
   game: Wayfinder
   image: 
   video: Chests/AllChests.mp4
-  description: This is a chests description. Ruins, mines, reaverwoods, mythic.
+  description: Rare chests in Wayfinder, unique to each of the major map regions.
   link: /chests/
 
 - name: Interactables
   game: Wayfinder
   image: plants.png
-  description: This is an interactables description. Avala flowers, hazard plant, hallucenogenic plant, doors, windows, dice trays, game board.
+  description: Miscellaneous interactable objects in Wayfinder!
   link: /interactables/
 
 - name: Dyeable VFX
   game: Wayfinder
   image: 
   video: DyeVFX/dyevfx.mp4
-  description: This is a dyeable vfx description.
+  description: Wayfinder's character customization got a lot more colorful with these dyeable particles!
   link: /dyeableVFX/
 
 - name: Auto Perf Tool
   game: Wayfinder
   image: autoperf.png
-  description: This is an auto perf description.
+  description: Keeping watch over Wayfinder's performance with detailed generated reports.
   link: /autoperf/
 
 - name: Animal Crossing TCG
   game: ACTCG
   image: actcg.png
-  description: This is an ACTCG description. Cards, water, vfx.
+  description: A trading card game mockup inspired by the Animal Crossing franchise!
   link: /animalcrossingTCG/
