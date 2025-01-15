@@ -52,6 +52,9 @@ nav.main {
     .dropdown {
         position: relative;
         display: grid;
+        width: min-content;
+        min-width: 6rem;
+        height: max-content;
     }
     /* Dropdown Content (Hidden by Default) */
     .dropdown-content {
@@ -108,10 +111,19 @@ nav.main {
 
     .link {
         color: $clr-jalapeno-red;
+        width: auto;
+        min-width: 6rem;
+        height: max-content;
     }
 
     .link:hover {
         color: $clr-mandarin-red;
+    }
+
+    .links {
+        max-width: 50%;
+        margin: auto;
+        justify-content: center;
     }
 
     .current-page {

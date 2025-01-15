@@ -1,21 +1,35 @@
 - title: Home
   link: /
+  project: false
 
 - title: About
   link: /about/
+  project: false
 
 - title: Projects
   link: 
-  subitems:
-  - title: Jellyfish
-    link: /jellyfish/
-  - title: Chests
-    link: /chests/
-  - title: Interactables
-    link: /interactables/
-  - title: Dyeable VFX
-    link: /dyeableVFX/
-  - title: Auto Perf
-    link: /autoperf/
-  - title: Animal Crossing TCG
-    link: /animalcrossingTCG/
+  project: false
+
+- title: Jellyfish
+  link: /jellyfish/
+  project: true
+
+- title: Chests
+  link: /chests/
+  project: true
+
+- title: Interactables
+  link: /interactables/
+  project: true
+
+- title: Dyeable VFX
+  link: /dyeableVFX/
+  project: true
+
+- title: Auto Perf
+  link: /autoperf/
+  project: true
+
+- title: Animal Crossing TCG
+  link: /animalcrossingTCG/
+  project: true

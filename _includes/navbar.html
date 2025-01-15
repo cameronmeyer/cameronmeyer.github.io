@@ -10,32 +10,28 @@
                     </a>
 
                     <!-- links (center aligned)-->
-                    <div class="flex flex-column lg:flex-row lg:w-full text-center stateful" style="max-width: 40%; margin: auto;" for="nav-burger">
-                        {% for item in site.data.navigation %}
-                            {% if item.subitems %}
-                                <!-- base of Projects hover dropdown -->
-                                <div class="dropdown w-full items-center lg:m-2 py-3">
-                                    <object data="/assets/images/Projects_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
-                                    <div class="flex flex-column w-full lg:w-auto dropdown-content">
-                                        {% for subitem in item.subitems %}
-                                            <!-- items of hover dropdown -->
-                                            <a class="link {% if page.title == subitem.title %} current-page {% endif %}" style="margin-top: 0.125rem;" href="{{ subitem.link }}"> {{ subitem.title }} </a>
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            {% else %}
-                                {% if item.title == "Home" %}
-                                    <a class="link w-full lg:m-2 py-3 {% if page.title == item.title %} current-page {% endif %}" href="{{ item.link }}">
-                                        <object data="/assets/images/Home_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
-                                    </a>
-                                {% endif %}
-                                {% if item.title == "About" %}
-                                    <a class="link w-full lg:m-2 py-3 {% if page.title == item.title %} current-page {% endif %}" href="{{ item.link }}">
-                                        <object data="/assets/images/About_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
-                                    </a>
-                                {% endif %}
-                            {% endif %}
-                        {% endfor %}
+                    <div class="links flex flex-column lg:flex-row lg:w-full text-center stateful" for="nav-burger">
+                        <a class="link lg:m-2 py-3 {% if page.title == item.title %} current-page {% endif %}" href="/">
+                            <object data="/assets/images/Home_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                        </a>
+
+                        <a class="link lg:m-2 py-3 {% if page.title == item.title %} current-page {% endif %}" href="/about/">
+                            <object data="/assets/images/About_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                        </a>
+
+                        <!-- base of Projects hover dropdown -->
+                        <div class="dropdown items-center lg:m-2 py-3">
+                            <object data="/assets/images/Projects_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                            <div class="flex flex-column w-full lg:w-auto dropdown-content">
+                                {% for item in site.data.navigation %}
+                                    {% if item.project %}
+                                        <!-- items of hover dropdown -->
+                                        <a class="link {% if page.title == item.title %} current-page {% endif %}" style="margin-top: 0.125rem;" href="{{ item.link }}"> {{ item.title }} </a>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+
                         <div class="pt-4"></div>
                     </div>
 
