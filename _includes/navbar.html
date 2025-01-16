@@ -1,51 +1,42 @@
 <nav class="main line-1">
     <div class="content-wrapper">
         <div class="content">
-            <div class="flex flex-column lg:flex-row items-center">
-                <div class="flex flex-row items-center lg:mr-auto w-full">
-                    <!-- left aligned -->
-                    <a class="w-full pt-1" alt="Home" style="transform-origin: left; max-width: 6%;" href="/">
-                        <!-- <img src="/assets/images/favicon-256.png" alt="Home" style=" transform-origin: left; max-width: 19.53125%;" /> -->
-                        <object data="/assets/images/CM_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+            <div class="flex flex-row items-center">
+                <a class="home-logo" alt="Home" href="/">
+                    <object data="/assets/images/CM_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                </a>
+
+                <div class="links flex flex-row">
+                    <a class="link mx-2 {% if page.title == item.title %} current-page {% endif %}" href="/" style="width: 62.1181%;">
+                        <object data="/assets/images/Home_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
                     </a>
 
-                    <!-- links (center aligned)-->
-                    <div class="links flex flex-column lg:flex-row lg:w-full text-center stateful" for="nav-burger">
-                        <a class="link lg:m-2 py-3 {% if page.title == item.title %} current-page {% endif %}" href="/">
-                            <object data="/assets/images/Home_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
-                        </a>
+                    <a class="link mx-2 {% if page.title == item.title %} current-page {% endif %}" href="/about/" style="width: 71.3171%;">
+                        <object data="/assets/images/About_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                    </a>
 
-                        <a class="link lg:m-2 py-3 {% if page.title == item.title %} current-page {% endif %}" href="/about/">
-                            <object data="/assets/images/About_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
-                        </a>
-
-                        <!-- base of Projects hover dropdown -->
-                        <div class="dropdown items-center lg:m-2 py-3">
-                            <object data="/assets/images/Projects_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
-                            <div class="flex flex-column w-full lg:w-auto dropdown-content">
-                                {% for item in site.data.navigation %}
-                                    {% if item.project %}
-                                        <!-- items of hover dropdown -->
-                                        <a class="link {% if page.title == item.title %} current-page {% endif %}" style="margin-top: 0.125rem;" href="{{ item.link }}"> {{ item.title }} </a>
-                                    {% endif %}
-                                {% endfor %}
-                            </div>
+                    <div class="dropdown items-center mx-2" style="width: 100%;">
+                        <object data="/assets/images/Projects_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                        <div class="dropdown-content flex flex-column w-full lg:w-auto">
+                            {% for item in site.data.navigation %}
+                            {% if item.project %}
+                            <!-- items of hover dropdown -->
+                            <a class="link text-center {% if page.title == item.title %} current-page {% endif %}" style="margin-top: 0.125rem;" href="{{ item.link }}"> {{ item.title }} </a>
+                            {% endif %}
+                            {% endfor %}
                         </div>
-
-                        <div class="pt-4"></div>
-                    </div>
-
-                    <!-- dots row (right aligned) -->
-                    <div class="lg:flex flex-row display-none">
-                        <div class="dot-1 border-radius-full"></div>
-                        <div class="dot-2 border-radius-full ml-2"></div>
-                        <div class="dot-3 border-radius-full ml-2"></div>
-                        <div class="dot-4 border-radius-full ml-2"></div>
                     </div>
                 </div>
+
+                <div class="dots lg:flex flex-row">
+                    <div class="dot-1 border-radius-full"></div>
+                    <div class="dot-2 border-radius-full ml-2"></div>
+                    <div class="dot-3 border-radius-full ml-2"></div>
+                    <div class="dot-4 border-radius-full ml-2"></div>
+                </div>
             </div>
-            <object data="/assets/images/Bars.svg" type="image/svg+xml"></object>
+            <object data="/assets/images/Bars.svg" type="image/svg+xml" style="pointer-events: none;"></object>
         </div>
     </div>
 </nav>
-<div style="height: calc(4rem + 1px);"></div>
+<div style="height: calc(6rem + 1px);"></div>

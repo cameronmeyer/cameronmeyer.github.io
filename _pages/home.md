@@ -4,9 +4,8 @@ title: Home
 description: Welcome to my portfolio website!
 ---
 
-<div class="content stack items-center">
-    <object data="/assets/images/Bars_Logo.svg" type="image/svg+xml"></object>
-    <object data="/assets/images/CameronMeyer_Logo.svg" type="image/svg+xml"></object>  
+<div class="content items-center">
+    <object data="/assets/images/CameronMeyer_Logo_Full.svg" type="image/svg+xml"></object>  
 </div>
 
 # First in class among tech artists named Cameron
