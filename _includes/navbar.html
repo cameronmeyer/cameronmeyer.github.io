@@ -7,16 +7,23 @@
                 </a>
 
                 <div class="links flex flex-row">
-                    <a class="link mx-2 {% if page.title == item.title %} current-page {% endif %}" href="/" style="width: 62.1181%;">
-                        <object data="/assets/images/Home_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                    <a class="link mx-2" href="/" style="width: 62.1181%;">
+                        <object data="{% if page.title == "Home" %} /assets/images/Home_Logo_Active.svg {% else %} /assets/images/Home_Logo.svg {% endif %}" type="image/svg+xml" style="pointer-events: none;"></object>
                     </a>
 
-                    <a class="link mx-2 {% if page.title == item.title %} current-page {% endif %}" href="/about/" style="width: 71.3171%;">
-                        <object data="/assets/images/About_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                    <a class="link mx-2" href="/about/" style="width: 71.3171%;">
+                        <object data="{% if page.title == "About" %} /assets/images/About_Logo_Active.svg {% else %} /assets/images/About_Logo.svg {% endif %}" type="image/svg+xml" style="pointer-events: none;"></object>
                     </a>
 
                     <div class="dropdown items-center mx-2" style="width: 100%;">
-                        <object data="/assets/images/Projects_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                        {% assign projectsLogo = "/assets/images/Projects_Logo.svg" %}
+                        {% for item in site.data.navigation %}
+                        {% if item.project and page.title == item.title %}
+                        {% assign projectsLogo = "/assets/images/Projects_Logo_Active.svg" %}
+                        {% break %}
+                        {% endif %}
+                        {% endfor %}
+                        <object data="{{ projectsLogo }}" type="image/svg+xml" style="pointer-events: none;"></object>
                         <div class="dropdown-content flex flex-column w-full lg:w-auto">
                             {% for item in site.data.navigation %}
                             {% if item.project %}
