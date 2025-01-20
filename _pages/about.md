@@ -3,7 +3,7 @@ permalink: /about/
 layout: default
 
 title: About
-description: Welcome to the UT Dallas SGDA site. We make and play games!
+description: All about Cameron!
 ---
 
 
@@ -22,25 +22,37 @@ description: Welcome to the UT Dallas SGDA site. We make and play games!
             </a>
         </div>
         <div class="flex flex-column flex-grow pb-2 px-5 pt-5">
-            <h1 class="h-color mb-2" align="center">This is my about me!</h1>
+            <h1 class="h-color mb-2" align="center">Hi, I'm Cameron!</h1>
+            <h3 class="mx-0 mt-2 mb-4 font-xl line-1">
+                I'm a passionate Technical Artist with a focus on 
+                asset implementation, tools development, and performance.
+            </h3>
             <p class="mt-0 mb-2 font-lg" align="left">
-                Hi, I'm Cameron! I'm a technical artist that's incredibly passionate about game development.
-                I recently graduated from UT Dallas with a degree in Computer Science. 
-                While there, I spent several years as an officer of the Student Game Developer Association (SGDA),
-                where I helped fellow students learn about life in the game industry.
-                After graduating, I worked as both programmer and producer at Wonder Works Studio.
-                While there, I collaborated with all departments to add new features and engineer key gameplay systems.
+                As a Technical Artist at Airship Syndicate, I specialize in optimizing internal processes
+                for developers by creating tools in Python, C++, and Unreal Blueprints. I also work on diagnosing
+                and resolving performance bottlenecks across projects. One of my favorite aspects of the role is
+                bringing artists' and designers' creative visions to life, contributing to the development of
+                immersive, interactive worlds. 
 
                 <br><br>
 
-                Now, as a Technical Artist at Airship Syndicate, I focus on streamlining internal processes for our developers.
-                I make tools in Python, C++, and Unreal Blueprints to help manage game assets.
-                I also help diagnose and resolve performance bottlenecks across our game.
+                Prior to joining Airship, I worked as both a programmer and producer at Wonder Works Studio, where
+                I collaborated with multiple departments to introduce new features and engineer key gameplay systems.
 
                 <br><br>
 
-                In my personal projects, I love to develop complex shaders, particle systems, and polished, engaging gameplay features.
-                When I'm not developing games, you may find me playing titles like The Last of Us, Breath of the Wild, or Hyper Light Drifter.
+                I graduated with a degree in Computer Science from UT Dallas, where I also served as an officer of
+                the Student Game Developer Association (SGDA) during my studies. In this role, I organized events
+                such as developer talks, game jams, and social nights, helping students connect with the game
+                development community and gain valuable industry insights.
+                
+                <br><br>
+
+                In my personal projects, I enjoy developing complex shaders, particle systems, and creating polished,
+                engaging gameplay features. Outside of work, you may find me playing games like The Last of Us,
+                Breath of the Wild, and Hyper Light Drifter.
+                
+                <br><br>
             </p>
         </div>
     </div>

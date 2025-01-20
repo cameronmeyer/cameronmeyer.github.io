@@ -4,15 +4,15 @@ title: Home
 description: Welcome to my portfolio website!
 ---
 
-<div class="content items-center">
-    <object data="/assets/images/CameronMeyer_Logo_Full.svg" type="image/svg+xml"></object>  
+<div class="content flex flex-column justify-items-center align-items-center">
+    <object style="max-width: 75%;" data="/assets/images/CameronMeyer_Logo_Full.svg" type="image/svg+xml"></object>  
+    
+    <div class="pt-8"></div>
+
+    <h1 class="mb-4 h-color font-4xl" align="center">Crafting Interactive Experiences <br> with Code and Creativity</h1>
+
+    <div class="pt-8"></div>
 </div>
-
-# First in class among tech artists named Cameron
-
-When you work with Cameron, you choose excellence. You look forward to the future and know that things will only get better. 
-
-<div class="pt-8"></div>
 
 {% include projects.html %}
 
