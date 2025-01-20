@@ -23,10 +23,10 @@ description: All about Cameron!
         </div>
         <div class="flex flex-column flex-grow pb-2 px-5 pt-5">
             <h1 class="h-color mb-2" align="center">Hi, I'm Cameron!</h1>
-            <h3 class="mx-0 mt-2 mb-4 font-xl line-1">
+            <p class="mx-0 mt-2 mb-6 font-xl" align="left" style="font-weight: 800;">
                 I'm a passionate Technical Artist with a focus on 
                 asset implementation, tools development, and performance.
-            </h3>
+            </p>
             <p class="mt-0 mb-2 font-lg" align="left">
                 As a Technical Artist at Airship Syndicate, I specialize in optimizing internal processes
                 for developers by creating tools in Python, C++, and Unreal Blueprints. I also work on diagnosing

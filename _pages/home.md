@@ -9,7 +9,7 @@ description: Welcome to my portfolio website!
     
     <div class="pt-8"></div>
 
-    <h1 class="mb-4 h-color font-4xl" align="center">Crafting Interactive Experiences <br> with Code and Creativity</h1>
+    <h1 class="mb-4 h-color font-2xl" align="center">Crafting Interactive Experiences <br> with Code and Creativity</h1>
 
     <div class="pt-8"></div>
 </div>
