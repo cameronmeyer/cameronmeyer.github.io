@@ -10,6 +10,10 @@
   link: 
   project: false
 
+- title: Resume
+  link: /resume/
+  project: false
+
 - title: Jellyfish
   link: /jellyfish/
   project: true
