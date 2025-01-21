@@ -8,7 +8,7 @@ description: All about Cameron!
 
 
 <div>
-    <div style="display: grid;">
+    <div class="align-items-center justify-items-center" style="display: grid;">
         <object class="title-image" data="/assets/images/AboutMe.svg" type="image/svg+xml"></object>
     </div>
     <div class="border flex flex-row border-radius-lg" style="max-width: 100%">
@@ -16,9 +16,12 @@ description: All about Cameron!
             <h1 class="mx-0 mt-2 mb-0 font-2xl line-1">Cameron Meyer</h1>
             <p class="mt-0 mb-2 font-lg">Technical Artist</p>
             <img class="border-image-circle mb-5" src="/assets/images/cameron.JPG" alt="Cameron's Portrait" style="width: 13rem; height: 13rem;"/>
-            <a class="mt-3 mb-3" href="https://www.linkedin.com/in/cameron-meyer/">
+            <a class="mt-3" href="https://www.linkedin.com/in/cameron-meyer/">
                 <i class="icon-linkedin"></i>
-                View Profile
+                Linkedin
+            </a>
+            <a href="/resume/">
+                View Resume
             </a>
         </div>
         <div class="flex flex-column flex-grow pb-2 px-5 pt-5">

@@ -5,7 +5,7 @@ description: Welcome to my portfolio website!
 ---
 
 <div class="content flex flex-column justify-items-center align-items-center">
-    <object style="max-width: 75%;" data="/assets/images/CameronMeyer_Logo_Full.svg" type="image/svg+xml"></object>  
+    <object class="pt-8" style="max-width: 75%;" data="/assets/images/CameronMeyer_Logo_Full.svg" type="image/svg+xml"></object>  
     
     <div class="pt-8"></div>
 
