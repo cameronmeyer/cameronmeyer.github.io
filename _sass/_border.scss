@@ -18,6 +18,26 @@ $box-shadow-y-hover: .1rem;
     box-shadow: $box-shadow-x $box-shadow-y $clr-jalapeno-red, $box-shadow-x*2 $box-shadow-y*2 $clr-mandarin-red, $box-shadow-x*3 $box-shadow-y*3 $clr-squash-blossom;
 }
 
+.block {
+    div {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+
+    h1, h2, h3, h4 {
+        text-align: center;
+    }
+
+    video {
+        overflow: hidden;
+        align-self: center;
+        margin: 0.5rem;
+        width: 100%;
+    }
+}
+
 .border-button {
     margin-right: $box-shadow-x*4.5;
     margin-bottom: $box-shadow-y*4.5;

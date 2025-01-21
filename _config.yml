@@ -9,7 +9,6 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 ## Data variables
 footer_menu: footer # Storing footer.yml as a variable
-#associated_companies: companies # Storing the companies.yml file as a variable
 
 ## Build settings
 plugins:
