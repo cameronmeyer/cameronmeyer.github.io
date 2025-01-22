@@ -52,7 +52,7 @@ You will see the idle jellyfish:
 - Jiggling
 {% endcapture %}
 
-{% include block.html content=block_content video="/assets/images/jellyfish.mp4" %}
+{% include block.html content=block_content video="/assets/images/projects/jellyfish.mp4" %}
 
 
 
