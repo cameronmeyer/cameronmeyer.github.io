@@ -5,6 +5,7 @@ layout: default
 title: Jellyfish
 description: Welcome to the jellyfish page.
 ---
+{% assign path = "/assets/images/projects/Jellyfish/" %}
 
 {% include spacer.html amount="1.5rem" %}
 
@@ -35,9 +36,6 @@ This is a page about jellyfish platforms. It's a very good page. It will discuss
 
 ---
 
-{% assign path = "/assets/images/projects/Jellyfish/" %}
-
-
 [//]: # --- JELLYFISH IDLING --- # :[\\]
 
 {% capture block_content %}
@@ -54,11 +52,7 @@ You will see the idle jellyfish:
 - Jiggling
 {% endcapture %}
 
-{% capture block_video %}
-/assets/images/jellyfish.mp4
-{% endcapture %}
-
-{% include block.html content=block_content video=block_video %}
+{% include block.html content=block_content video="/assets/images/jellyfish.mp4" %}
 
 
 
