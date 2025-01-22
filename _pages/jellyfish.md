@@ -19,20 +19,12 @@ description: Welcome to the jellyfish page.
 	</video>      
 </div>
 
-This is a page about jellyfish platforms. It's a very good page. It will discuss the following:
-- Idle activity
-	- Bobbing
-	- Rotating
-	- Pulsing
-	- Jiggling
-- Reactivity
-	- VFX
-	- Emissive pulse
-	- Wobble
-	- Bounce
-- Multiplayer/Replication Support
-	- Lower bound offset cap
-	- Visuals and hitboxes identical between players
+{% include spacer.html amount="1.5rem" %}
+
+In *Wayfinder*'s Crucible world region, the mystical jungle-like environment is broken up by steep changes in elevation
+that compose a large gorge. To bridge some of these gaps and provide the player with more traversal options, we created
+floating platforms. The platforms' visuals land somewhere between a living jellyfish that entices the player to approach,
+and a large mossy rock, to communicate that the player may stand on them.
 
 ---
 
@@ -41,22 +33,21 @@ This is a page about jellyfish platforms. It's a very good page. It will discuss
 {% capture block_content %}
 ### IDLE ACTIVITY
 
-Since these platforms are based on real, living creatures, I wanted to ensure they felt *alive* even when the
-player wasn't interacting with them. However, this idle behavior needed to be subtle enough that it would not
-interfere with the level platforming elements. 
+Since these platforms are based on living creatures, I wanted to ensure they felt *alive* even when the
+player wasn't directly interacting with them. However, this idle behavior needed to be subtle enough that
+it would not interfere with the level platforming elements. 
 
-You will see the idle jellyfish:
+In their idle state, the jellyfish are capable of:
 - Bobbing
 - Rotating
 - Pulsing
 - Jiggling
+
+The internal values controlling these behaviors are all randomized between platform instances, so no two
+platforms will sync up their movement in an unnatural way.
 {% endcapture %}
 
 {% include block.html content=block_content video="/assets/images/projects/jellyfish.mp4" %}
-
-
-
-
 
 {% include spacer.html amount="1.5rem" %}
 
@@ -69,11 +60,10 @@ You will see the idle jellyfish:
 {% capture block1_content %}
 ### REACTIVITY
 
-These platforms respond to the player landing on them! The visual feedback includes:
-- VFX
-- Emissive pulse
-- Wobble
-- Bounce
+These living platforms also react to the player! When player lands on them, the platforms:
+- Push downward and rebound to their original positions
+- Surface jiggle and emissive pulse
+- Play fungal spore VFX and otherworldly sound effects
 {% endcapture %}
 
 {% capture block1_video %}
@@ -81,10 +71,6 @@ These platforms respond to the player landing on them! The visual feedback inclu
 {% endcapture %}
 
 {% include block.html content=block1_content video=block1_video video_first=true %}
-
-
-
-
 
 {% include spacer.html amount="1.5rem" %}
 
@@ -95,14 +81,17 @@ These platforms respond to the player landing on them! The visual feedback inclu
 [//]: # --- JELLYFISH MULTIPLAYER 1 --- # :[\\]
 
 {% capture block2_content %}
-### MULTIPLAYER!
+### MULTIPLAYER SUPPORT
 
-Some text about Jellyfish! I will write actually quite a lot of text here because I want to see what happens
-when we have a lot going on and how the page elements will decide to space themselves out.
+Since *Wayfinder* supports online co-op play, the jellyfish platforms needed to be able to support 
+network replication to clients. It was critical that the jellyfish platforms match *exactly* between
+party members to avoid potential de-sync issues from differences in collision or placement of the
+platforms. 
 
-The platforms work well with multiplayer and replication to clients! Here's how:
-- Lower bound offset cap
-- Visuals and hitboxes identical between players
+There were some notable challenges in implementing multiplayer support:
+- Idle movement variables needed to be randomized per floating platform, but set from the host for all clients to match
+- The jellyfish's organic, non-symmetrical shape required the collision mesh to move exactly in step with the visuals
+- The vertical rebound from the player landing on the jellyfish needed a maximum offset in case party members repeatedly jumped on it
 {% endcapture %}
 
 {% capture block2_video %}
@@ -115,8 +104,11 @@ The platforms work well with multiplayer and replication to clients! Here's how:
 
 {% include block.html content=block2_content video=block2_video video2=block2_video2 %}
 
+{% include spacer.html amount="0.5rem" %}
 
+---
 
-
+Special thanks to [Eleanore Falck](https://www.artstation.com/eleanore_falck) and [Will Santos](https://www.wesantos.com/) for
+helping to bring these platforms to life!
 
 {% include spacer.html amount="1.5rem" %}
