@@ -3,15 +3,29 @@
         {% if include.video %}
             {% if include.video_first == true %}
                 <!-- CONTENT DIV MUST BE INLINED!! -->
-                <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
-                    <source src="{{ include.video }}" type="video/mp4">
-                </video>
-                <div style="max-width: 50%;" markdown="1">{{ include.content }}</div>
+                <div class="w-full">
+                    <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
+                        <source src="{{ include.video }}" type="video/mp4">
+                    </video>
+                    {% if include.video2 %}
+                        <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
+                            <source src="{{ include.video2 }}" type="video/mp4">
+                        </video>
+                    {% endif %}
+                </div>
+                <div style="max-width: 40%;" markdown="1">{{ include.content }}</div>
             {% else %}
-                <div style="max-width: 50%;" markdown="1">{{ include.content }}</div>
-                <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
-                    <source src="{{ include.video }}" type="video/mp4">
-                </video>
+                <div style="max-width: 40%;" markdown="1">{{ include.content }}</div>
+                <div class="w-full">
+                    <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
+                        <source src="{{ include.video }}" type="video/mp4">
+                    </video>
+                    {% if include.video2 %}
+                        <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
+                            <source src="{{ include.video2 }}" type="video/mp4">
+                        </video>
+                    {% endif %}
+                </div>
             {% endif %}
         {% else %}
         <div markdown="1">{{ include.content }}</div>
