@@ -33,7 +33,6 @@ nav.main {
 
     @media (min-width: 992px) {
         .content {
-            //padding-bottom: .15rem;
             background-color: $clr-cream;
             //background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
 
@@ -52,9 +51,11 @@ nav.main {
     .dropdown {
         position: relative;
         display: grid;
-        width: min-content;
         min-width: 6rem;
-        height: max-content;
+
+        > *:not(.dropdown-content) {
+            transition: transform .1s;
+        }
     }
     /* Dropdown Content (Hidden by Default) */
     .dropdown-content {
@@ -95,8 +96,14 @@ nav.main {
         transition: color .25s, font-weight .25s;
     }
     /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-        display: block;
+    .dropdown:hover {
+        .dropdown-content {
+            display: block;
+        }
+
+        > *:not(.dropdown-content) {
+            transform: translateY(-0.25rem) scale(1.1);
+        }
     }
     /* Change the background color of the dropdown button when the dropdown content is shown */
     .dropdown:hover .dropbtn {
@@ -118,21 +125,26 @@ nav.main {
 
     .link {
         color: $clr-jalapeno-red;
-        //width: min-content;
         min-width: 6rem;
-        //max-width: 8rem;
+        align-items: center;
+        display: flex;
+
+        > * {
+            transition: transform .1s;
+        }
     }
 
     .link:hover {
         color: $clr-mandarin-red;
+
+        > * {
+            transform: translateY(-0.25rem) scale(1.1);
+        }
     }
 
     .links {
         justify-content: center;
-        align-items: start;
-        flex: 1 0 80%;
-        padding-left: 20%;
-        padding-right: 20%;
+        align-items: center;
         margin: auto;
     }
 
@@ -148,8 +160,8 @@ nav.main {
     }
 
     .dot-1, .dot-2, .dot-3, .dot-4 {
-        width: .7rem;
-        height: .7rem;
+        width: .6rem;
+        height: .6rem;
     }
 
     .dot-1 {
