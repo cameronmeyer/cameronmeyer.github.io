@@ -52,7 +52,6 @@ nav.main {
         position: relative;
         display: grid;
         min-width: 6rem;
-
         > *:not(.dropdown-content) {
             transition: transform .1s;
         }
@@ -87,7 +86,6 @@ nav.main {
         color: $clr-white;
         border-radius: .5rem;
         background-color: $clr-mandarin-red;
-        //border: .15rem solid $clr-mandarin-red;
     }
     /* Change color of dropdown link if it is the current page */
     .dropdown-content a.current-page {
@@ -100,7 +98,6 @@ nav.main {
         .dropdown-content {
             display: block;
         }
-
         > *:not(.dropdown-content) {
             transform: translateY(-0.25rem) scale(1.1);
         }
@@ -119,7 +116,6 @@ nav.main {
 
     .home-logo {
         width: 100%;
-        //max-width: 6%;
         flex: 1 1 0px;
     }
 
@@ -130,13 +126,13 @@ nav.main {
         display: flex;
 
         > * {
+            height: 100%;
             transition: transform .1s;
         }
     }
 
     .link:hover {
         color: $clr-mandarin-red;
-
         > * {
             transform: translateY(-0.25rem) scale(1.1);
         }
@@ -145,7 +141,6 @@ nav.main {
     .links {
         justify-content: center;
         align-items: center;
-        margin: auto;
     }
 
     .current-page {
@@ -166,7 +161,6 @@ nav.main {
 
     .dot-1 {
         background-color: $clr-dark-sapphire;
-        //border: .075rem solid $clr-azraq-blue;
     }
 
     .dot-2 {

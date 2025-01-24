@@ -40,37 +40,37 @@ $box-shadow-y-hover: .1rem;
 .border-button {
     margin-right: $box-shadow-x*4.5;
     margin-bottom: $box-shadow-y*4.5;
-    transition: border .2s ease-in-out, box-shadow .25s ease-in-out;
+    transition: border .1s ease-in-out, box-shadow .25s ease-in-out;
 }
 
 .border-button {
     img, video {
         border: $box-border solid $clr-jalapeno-red;
         border-radius: .5rem;
-        transition: border .2s ease-in-out;
+        transition: border .1s ease-in-out;
     }
 
     h1 {
-        transition: color .2s ease-in-out;
+        transition: color .1s ease-in-out;
     }
 }
 
 .border-button:hover {
     img, video {
         border: $box-border solid $clr-squash-blossom;
-        transition: border .2s ease-in-out;
+        transition: border .1s ease-in-out;
     }
 
     h1 {
         color: $clr-squash-blossom;
-        transition: color .2s ease-in-out;
+        transition: color .1s ease-in-out;
     }
 }
 
 .border-button:hover {
     border: $box-border solid $clr-squash-blossom;
     box-shadow: $box-shadow-x*1.5 $box-shadow-y*1.5 $clr-squash-blossom, $box-shadow-x*3 $box-shadow-y*3 $clr-mandarin-red, $box-shadow-x*4.5 $box-shadow-y*4.5 $clr-jalapeno-red;
-    transition: box-shadow .2s ease-in-out, border .2s ease-in-out;
+    transition: box-shadow .1s ease-in-out, border .2s ease-in-out;
     //border: 1px solid $clr-squash-blossom;
     //box-shadow: $box-shadow-x-hover $box-shadow-y-hover $clr-squash-blossom;
     //transform: translateX($box-shadow-x - $box-shadow-x-hover) translateY($box-shadow-y - $box-shadow-y-hover)
