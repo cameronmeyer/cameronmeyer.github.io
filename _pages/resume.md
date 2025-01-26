@@ -8,7 +8,7 @@ description: Cameron's Resume
 
 
 <div class="flex flex-column">
-    <div style="display: grid;">
+	<div class="align-items-center justify-items-center" style="display: grid;">
         <object class="title-image" data="/assets/images/Resume_Logo_Active.svg" type="image/svg+xml"></object>
     </div>
     <div class="border flex flex-row border-radius-lg self-center" style="display:inline-block">
