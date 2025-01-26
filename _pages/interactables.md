@@ -13,12 +13,8 @@ description: Welcome to the plants page.
 
 ---
 
-In *Wayfinder* players will encounter a variety of treasure chests during their journey. I was fortunately tasked with the
-implementation and polish of several of these chests. While their visuals may vary greatly, all chests generally required 
-custom setups that included the following:
-- Animations, sounds, and visual effects all synced up with timelines
-- Animated material properties synced with other effects
-- Blueprint logic to execute all component parts, handle state changes, and award loot
+The world of *Wayfinder* is packed full of objects for players to interact with. I had the pleasure of
+implementing many of these items, primarily in the late-game 'Crucible' region and for player customizable housing.
 
 ---
 
@@ -27,9 +23,14 @@ custom setups that included the following:
 {% capture block_content %}
 ### ELDREN CACHE
 
-- Custom emissive anim on cache
-- Synced with key insertion via timeline to showcase activation
-- Collision updates as key is removed/added and forcefield activates around cache
+Eldren caches spawn occasionally across the land of the Crucible. They are timed challenges for the player with
+two main components: a key to collect, and a cache to place it in. If a player can connect both within the allotted
+time window, they will be granted some loot for their efforts.
+
+The key is a large crystalline hexagonal prism with emissives and VFX to draw the player in. Once obtained, a miniaturized
+version will float behind the player as they transport it to the cache. The cache is a hub for the key, with a hexagonal
+channel to place it in. The key rotates and slides into place, alighting emissive lines on the cache. Then, the whole cache 
+base glows and the VFX grow more intense as the cache has been fully activated, ready to reward the player.
 {% endcapture %}
 
 {% capture block_video %}
