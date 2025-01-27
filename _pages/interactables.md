@@ -60,7 +60,7 @@ base glows and the VFX grow more intense as the cache has been fully activated, 
 {% endcapture %}
 
 {% capture block_video2 %}
-{{path}}HazardMushroomTall.mp4
+{{path}}HazardMushroomGameplay.mp4
 {% endcapture %}
 
 {% include block.html content=block_content video=block_video video2=block_video2 video_first=true %}
@@ -96,10 +96,10 @@ base glows and the VFX grow more intense as the cache has been fully activated, 
 
 
 
-[//]: # --- AVALA FLOWERS --- # :[\\]
+[//]: # --- AVALA'S FLOWERS --- # :[\\]
 
 {% capture block_content %}
-### AVALA FLOWERS
+### AVALA'S FLOWERS
 
 In *Wayfinder*, godsblood is a key power source extracted from underground veins.
 That fluid flows through this gritty, forged chest.
@@ -109,7 +109,7 @@ goes down, and the chest loses its lustrous green emissive once the player has l
 {% endcapture %}
 
 {% capture block_video %}
-{{path}}MinesChest.mp4
+{{path}}AvalaFlowers.mp4
 {% endcapture %}
 
 {% include block.html content=block_content video=block_video video_first=true %}
@@ -133,10 +133,14 @@ goes down, and the chest loses its lustrous green emissive once the player has l
 {% endcapture %}
 
 {% capture block_video %}
-{{path}}MinesChest.mp4
+{{path}}DoorsAndWindows.mp4
 {% endcapture %}
 
-{% include block.html content=block_content video=block_video %}
+{% capture block_video2 %}
+{{path}}DoorsAndWindowsMultiplayer.mp4
+{% endcapture %}
+
+{% include block.html content=block_content video=block_video video2=block_video2 %}
 
 {% include spacer.html amount="0.5rem" %}
 
@@ -147,7 +151,7 @@ goes down, and the chest loses its lustrous green emissive once the player has l
 [//]: # --- CRITICAL ROLE --- # :[\\]
 
 {% capture block_content %}
-### CRITICAL ROLE GAMEBOARD
+### CRITICAL ROLE GAMEBOARDS
 
 In *Wayfinder*, godsblood is a key power source extracted from underground veins.
 That fluid flows through this gritty, forged chest.
@@ -157,10 +161,14 @@ goes down, and the chest loses its lustrous green emissive once the player has l
 {% endcapture %}
 
 {% capture block_video %}
-{{path}}MinesChest.mp4
+{{path}}CriticalRole.mp4
 {% endcapture %}
 
-{% include block.html content=block_content video=block_video video_first=true %}
+{% capture block_video2 %}
+{{path}}CriticalRoleMultiplayer.mp4
+{% endcapture %}
+
+{% include block.html content=block_content video=block_video video2=block_video2 video_first=true %}
 
 {% include spacer.html amount="0.5rem" %}
 
@@ -170,6 +178,7 @@ goes down, and the chest loses its lustrous green emissive once the player has l
 {% include spacer.html amount="1.5rem" %}
 
 Special thanks to [Eleanore Falck](https://www.artstation.com/eleanore_falck),
-Rebecca McManamy, Ryan Cullum, Brittany Rojas, and Dave Sullivan for helping to bring these platforms to life!
+Rebecca McManamy, Ryan Cullum, [Brittany Rojas](https://www.artstation.com/brittanyhein3d),
+and Dave Sullivan for helping to bring these platforms to life!
 
 {% include spacer.html amount="1.5rem" %}
