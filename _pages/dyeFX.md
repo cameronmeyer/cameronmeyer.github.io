@@ -35,16 +35,37 @@ via the same menus as well. This system applies to both weapons and character-at
 [//]: # --- GAMEPLAY --- # :[\\]
 
 {% capture block_content %}
-### USE IN GAME
+### PROCESS FOR DYEING
 
-Eldren caches spawn occasionally across the land of the Crucible. They are timed challenges for the player with
-two main components: a key to collect, and a cache to place it in. If a player can connect both within the allotted
-time window, they will be granted some loot for their efforts.
+- since the system relies on component tags to work, the niagara systems are expected to be contained inside a BP. below, we are retreiving a spawned component on the player and checking its components
+- on 'ApplyItemEffects' (I think this is basically when something on your character updates)
+	- if the item that updated is a weapon (identified by a 'root dye slot name')	
+		- get all niagara components
+		- if niagara component exists, has a vfx dye tag, and a weapon dye tag, keep track of component for dyeing
+	- else
+		- get all niagara components
+		- if niagara component exists, has a vfx dye tag, and a ARMOR dye tag, keep track of component for dyeing (mutually exclusive with weapon)
+- on 'ApplyDyesToNiagaraComponent'
+	- check that user actually changed the appropriate dye channel (the emissive channel, also affects meshes)
+	- load the dye texture
+	- set niagara texture variable to the dye texture
+- MF_VFX_Dye values:
+	- original color (lerp between this and new colors based on other passed values)
+	- color strength
+	- gradient offset strength, offset bias, and mask
+	- gradient clamp min/max
+	- dye parameter texture object
+- MF_VFX_Dye logic:
+	- we lerp between the original color and the dye texture (with offsets, clamps, etc. applied to sample the curve as desired)
+	- the ALPHA for this lerp multiplies the alpha of the dye texture with our dye mask
+	- a dye texture is ALWAYS applied with our material binding, and the default dye texture is blank/transparent, so by default the MF will return the original color from the lerp 
+- VFX materials can have whatever custom logic they want for vfx dyes
+	- materials simply use the MF (above), setting the floats and passing in the original undyed state
+	- output gets plugged into material emissive
+- each dyeable niagara system has a 'DyeTex' exposed user parameter
+	- each EMITTER's renderer in the niagara system must have a material parameter binding set up
+	- binds the material parameter (DyeParam) to the niagara variable (DyeTex)
 
-The key is a large crystalline hexagonal prism with emissives and VFX to draw the player in. Once obtained, a miniaturized
-version will float behind the player as they transport it to the cache. The cache is a hub for the key, with a hexagonal
-channel to place it in. The key rotates and slides into place, alighting emissive lines on the cache. Then, the whole cache 
-base glows and the VFX grow more intense as the cache has been fully activated, ready to reward the player.
 {% endcapture %}
 
 {% capture block_video %}
