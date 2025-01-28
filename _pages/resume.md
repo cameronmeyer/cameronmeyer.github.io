@@ -18,8 +18,8 @@ description: Cameron's Resume
 			document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
 				var adobeDCView = new AdobeDC.View({clientId: "eac548ae89c941ffbbb543b2012b486b", divId: "adobe-dc-view"});
 				adobeDCView.previewFile({
-					content:{location: {url: "/assets/images/Resume.pdf"}},
-					metaData:{fileName: "Resume.pdf"}
+					content:{location: {url: "/assets/images/CameronMeyer_TechnicalArtist_Resume.pdf"}},
+					metaData:{fileName: "CameronMeyer_TechnicalArtist_Resume.pdf"}
 				}, {embedMode: "IN_LINE"});
 			});
 		</script>
