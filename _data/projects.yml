@@ -13,18 +13,18 @@
   description: Part bouncy platform, part mythical creature in Wayfinder.
   link: /jellyfish/
 
+- name: Animal Crossing TCG
+  game: ACTCG
+  image: actcg.png
+  description: A trading card game mockup inspired by the Animal Crossing franchise!
+  link: /animalcrossingTCG/
+
 - name: Chests
   game: Wayfinder
   image: 
   video: Chests/AllChests.mp4
   description: Rare chests in Wayfinder, unique to each of the major map regions.
   link: /chests/
-
-- name: Interactables
-  game: Wayfinder
-  image: plants.png
-  description: Miscellaneous interactable objects in Wayfinder!
-  link: /interactables/
 
 - name: Dyeable VFX
   game: Wayfinder
@@ -39,8 +39,8 @@
   description: Keeping watch over Wayfinder's performance with detailed generated reports.
   link: /autoperf/
 
-- name: Animal Crossing TCG
-  game: ACTCG
-  image: actcg.png
-  description: A trading card game mockup inspired by the Animal Crossing franchise!
-  link: /animalcrossingTCG/
+- name: Interactables
+  game: Wayfinder
+  image: plants.png
+  description: Miscellaneous interactable objects in Wayfinder!
+  link: /interactables/
