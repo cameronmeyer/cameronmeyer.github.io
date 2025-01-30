@@ -18,12 +18,12 @@
   link: /jellyfish/
   project: true
 
-- title: Chests
-  link: /chests/
+- title: Animal Crossing TCG
+  link: /animalcrossingTCG/
   project: true
 
-- title: Interactables
-  link: /interactables/
+- title: Chests
+  link: /chests/
   project: true
 
 - title: Dyeable VFX
@@ -34,6 +34,6 @@
   link: /autoperf/
   project: true
 
-- title: Animal Crossing TCG
-  link: /animalcrossingTCG/
+- title: Interactables
+  link: /interactables/
   project: true

@@ -1,0 +1,26 @@
+<div class="content">
+    <div class="block border border-radius-lg flex flex-row">
+        {% if include.image %}
+            {% if include.image_first == true %}
+                <!-- CONTENT DIV MUST BE INLINED!! -->
+                <div class="w-full">
+                    <img class="border-plain border-radius-md mb-5" src="{{ include.image }}" alt="FolderContents.png" />
+                    {% if include.image2 %}
+                        <img class="border-plain border-radius-md mb-5" src="{{ include.image2 }}" alt="FolderContents.png" />
+                    {% endif %}
+                </div>
+                <div style="max-width: 40%;" markdown="1">{{ include.content }}</div>
+            {% else %}
+                <div style="max-width: 40%;" markdown="1">{{ include.content }}</div>
+                <div class="w-full">
+                    <img class="border-plain border-radius-md mb-5" src="{{ include.image }}" alt="FolderContents.png" />
+                    {% if include.image2 %}
+                        <img class="border-plain border-radius-md mb-5" src="{{ include.image2 }}" alt="FolderContents.png" />
+                    {% endif %}
+                </div>
+            {% endif %}
+        {% else %}
+        <div markdown="1">{{ include.content }}</div>
+        {% endif %}
+    </div>
+</div>

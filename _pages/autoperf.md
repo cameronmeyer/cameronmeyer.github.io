@@ -35,11 +35,6 @@ specific areas to investigate further for bottlenecks.
 
 --- 
 
-<div class="content flex flex-column align-items-center justify-items-center">
-	<img class="border-plain border-radius-md mb-5" style="width: 65%" src="{{path}}FolderContents.png" alt="FolderContents.png" />
-	<img class="border-plain border-radius-md mb-5" style="width: 65%" src="{{path}}PerfReport.png" alt="PerfReport.png" />
-</div>
-
 [//]: # --- GAMEPLAY --- # :[\\]
 
 {% capture block_content %}
@@ -53,30 +48,30 @@ The test reads from data tables to determine the performance test's parameters, 
 - Global quality setting presets
 - Which maps allow for performance testing
 
-Cameras are hand-placed around levels, ideally showing angles that players are likely to encounter in game. Each camera has an 
-actor tag applied to it, identifying it as relevant to performance testing. These cameras only exist in the test environment, not
-in official builds.
+Cameras are hand-placed around levels, ideally showing angles players are likely to encounter in game. Each camera has a tag
+applied to it, identifying it as relevant to performance testing. When the test executes, we iterate through each camera, taking
+a screenshot and recording how fast our threads are running.
 
-When the test executes, we iterate through each camera, taking a screenshot and recording the following data:
-- Camera name
-- Average FPS
-- Average game thread time (in ms)
-- Average render thread time (in ms)
-- Average GPU thread time (in ms)
-
-After all data has been collected, we write the output to a new file that has additional information, such as:
+After all data has been collected, we write the output to a new file containing:
 - Build version
 - Date of test
 - Map name
 - Resolution captured
-- ...and all data from the cameras
+- ...and all data from each camera
 
-Leveraging automated testing was extremely useful for the *Wayfinder* team, as it allowed for easy evaluation of our performance targets.
+Automated testing was extremely useful for the *Wayfinder* team, allowing for easy evaluation of our performance targets.
 We could place as many cameras as needed, and from referencing the collected data and the screenshots, we could investigate areas 
-experiencing slowdowns. 
-
+experiencing slowdowns.
 {% endcapture %}
 
-{% include block.html content=block_content %}
+{% capture block_image %}
+{{path}}FolderContents.png
+{% endcapture %}
+
+{% capture block_image2 %}
+{{path}}PerfReport.png
+{% endcapture %}
+
+{% include image_block.html content=block_content image=block_image image2=block_image2 %}
 
 {% include spacer.html amount="1.5rem" %}
