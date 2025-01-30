@@ -33,49 +33,50 @@ via the same menus as well. This system applies to both weapons and character-at
 --- 
 
 [//]: # --- GAMEPLAY --- # :[\\]
+<div class="content flex flex-column">
+	<video class="border border-radius-lg" autoplay muted controls loop>
+		<source src="{{path}}DyeRevenantKyros.mp4" type="video/mp4">
+	</video>
+	<video class="border border-radius-lg mt-6" autoplay muted controls loop>
+		<source src="{{path}}DyeHeroicKyros.mp4" type="video/mp4">
+	</video>    
+</div>
 
+{% include spacer.html amount="1.5rem" %}
+
+[//]: # --- TECH STRUCTURE --- # :[\\]
 {% capture block_content %}
-### PROCESS FOR DYEING
+## PROCESS FOR DYEING
 
-- since the system relies on component tags to work, the niagara systems are expected to be contained inside a BP. below, we are retreiving a spawned component on the player and checking its components
-- on 'ApplyItemEffects' (I think this is basically when something on your character updates)
-	- if the item that updated is a weapon (identified by a 'root dye slot name')	
-		- get all niagara components
-		- if niagara component exists, has a vfx dye tag, and a weapon dye tag, keep track of component for dyeing
-	- else
-		- get all niagara components
-		- if niagara component exists, has a vfx dye tag, and a ARMOR dye tag, keep track of component for dyeing (mutually exclusive with weapon)
-- on 'ApplyDyesToNiagaraComponent'
-	- check that user actually changed the appropriate dye channel (the emissive channel, also affects meshes)
-	- load the dye texture
-	- set niagara texture variable to the dye texture
-- MF_VFX_Dye values:
-	- original color (lerp between this and new colors based on other passed values)
-	- color strength
-	- gradient offset strength, offset bias, and mask
-	- gradient clamp min/max
-	- dye parameter texture object
-- MF_VFX_Dye logic:
-	- we lerp between the original color and the dye texture (with offsets, clamps, etc. applied to sample the curve as desired)
-	- the ALPHA for this lerp multiplies the alpha of the dye texture with our dye mask
-	- a dye texture is ALWAYS applied with our material binding, and the default dye texture is blank/transparent, so by default the MF will return the original color from the lerp 
-- VFX materials can have whatever custom logic they want for vfx dyes
-	- materials simply use the MF (above), setting the floats and passing in the original undyed state
-	- output gets plugged into material emissive
-- each dyeable niagara system has a 'DyeTex' exposed user parameter
-	- each EMITTER's renderer in the niagara system must have a material parameter binding set up
-	- binds the material parameter (DyeParam) to the niagara variable (DyeTex)
+### CODE
+When an item equipped on the player is updated, it checks whether it should dye. First, it determines whether it is a weapon or cosmetic,
+as each should not share the same applied dyes. Then, it gathers all Niagara components on the item, and if those components have the
+appropriate tags applied, we will mark the component as dyeable.
 
+When actually applying dyes to the Niagara component, we check that the user actually changed the appropriate dye channel. Specifically,
+when the 'Emissive' dye channel is set, that is the dye texture used for VFX as well. We then load the dye texture into memory and set 
+a Niagara texture variable to reference this dye texture.
+
+### NIAGARA SYSTEMS
+Each dyeable Niagara system has an exposed user parameter that keeps track of the applied dye texture. Each emmitter in that system
+should have their renderer set up with a material parameter binding. This links the dye texture parameter in the material with the 
+dye texture parameter in the Niagara system. 
+
+A dye texture is **always** applied to our dyable Niagara systems as a result, so we set the default texture to be fully transparent.
+This way, there is no color gradient for the material to sample if no dye is applied.
+
+### MATERIALS
+The Niagara emitter materials contain a material function `MF_VFX_Dye`. This function interpolates between the
+particle's original color and the dye texture color (after it has been affected by offsets, clamps, etc. that help sample our gradient
+texture as desired). The alpha, or the interpolation value, for the lerp is obtained by multiplying the alpha of the dye texture with a
+dye mask that ensures we are dying only the correct areas on our particle texture. Since our default dye texture is fully transparent,
+when no dye is applied the lerp's interpolation value is 0, and the material function will simply return the original particle color.
+
+Particle materials may use whatever custom logic they want to define how dyes should sample the gradient and map to the particle.
+As long as the material passes that into the `MF_VFX_Dye` material function, we can plug that node's output into the material's
+emissive channel. 
 {% endcapture %}
 
-{% capture block_video %}
-{{path}}DyeRevenantKyros.mp4
-{% endcapture %}
-
-{% capture block_video2 %}
-{{path}}DyeHeroicKyros.mp4
-{% endcapture %}
-
-{% include block.html content=block_content video=block_video video2=block_video2 %}
+{% include block.html content=block_content %}
 
 {% include spacer.html amount="1.5rem" %}

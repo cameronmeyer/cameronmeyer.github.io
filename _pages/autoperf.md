@@ -29,58 +29,51 @@ description: Welcome to the automated performance tool page.
 
 {% include spacer.html amount="1.5rem" %}
 
-- wayfinder has large open biomes/levels
-- our studio is small
-- need for automated perf testing to track stats over time
-- needed to be able to call out specific areas (camera angles) to investigate for bottlenecks
+*Wayfinder*'s overland levels are expansive biomes for players to explore. For our relatively small studio size to stay efficient, 
+we needed a more automated approach to tracking performance over time. From this data, we also needed to be able to call out 
+specific areas to investigate further for bottlenecks.
 
 --- 
 
-<img class="border-plain border-radius-md mb-5" src="{{path}}FolderContents.png" alt="FolderContents.png" />
-<img class="border-plain border-radius-md mb-5" src="{{path}}PerfReport.png" alt="PerfReport.png" />
+<div class="content flex flex-column align-items-center justify-items-center">
+	<img class="border-plain border-radius-md mb-5" style="width: 65%" src="{{path}}FolderContents.png" alt="FolderContents.png" />
+	<img class="border-plain border-radius-md mb-5" style="width: 65%" src="{{path}}PerfReport.png" alt="PerfReport.png" />
+</div>
 
 [//]: # --- GAMEPLAY --- # :[\\]
 
 {% capture block_content %}
 ### TOOL STRUCTURE
 
-- auto perf tool hooks into unreal's automation test framework (found within the session frontend?)
-- the test reads data from tables to determine test parameters
-	- test setting table
-		- minimum realtime to wait for stabilization
-		- minimum frame count to wait for stabilization
-		- sampling duration
-		- sampling frame count
-		- window size/resolution
-		- quality settings
-	- maps table
-		- map name
-		- enabled in testing menu?
-- perf cams are placed around levels that need testing
-	- should be hand-placed, ideally from angles that players are likely to actually see in game
-	- these cameras have a special PerfCam tag
-	- cameras are not loaded in build, only in test environment
-- when test executes:
-	- iterate through all the cameras
-		- record data
-			- camera name
-			- avg fps
-			- avg game thread time (ms?)
-			- avg render thread time (ms?)
-			- avg gpu thread time (ms?)
-		- screenshot
-	- write output to file
-		- version
-		- date
-		- map
-		- resolution
-		- camera table
+The Auto Perf tool hooks into Unreal Engine's automation test framework, allowing us to launch it with the click of a button.
+The test reads from data tables to determine the performance test's parameters, including:
+- Minimum duration to wait for the game to stabilize before sampling performance
+- Sampling duration
+- Window resolution of test
+- Global quality setting presets
+- Which maps allow for performance testing
 
-- usefulness:
-	- easy evaluation of performance targets
-	- as many or as few cameras as you'd like
-	- data + camera location indicates specific areas for bottlenecks
-	- screenshots obviously show what is being rendered in a specific location so we can go track things down
+Cameras are hand-placed around levels, ideally showing angles that players are likely to encounter in game. Each camera has an 
+actor tag applied to it, identifying it as relevant to performance testing. These cameras only exist in the test environment, not
+in official builds.
+
+When the test executes, we iterate through each camera, taking a screenshot and recording the following data:
+- Camera name
+- Average FPS
+- Average game thread time (in ms)
+- Average render thread time (in ms)
+- Average GPU thread time (in ms)
+
+After all data has been collected, we write the output to a new file that has additional information, such as:
+- Build version
+- Date of test
+- Map name
+- Resolution captured
+- ...and all data from the cameras
+
+Leveraging automated testing was extremely useful for the *Wayfinder* team, as it allowed for easy evaluation of our performance targets.
+We could place as many cameras as needed, and from referencing the collected data and the screenshots, we could investigate areas 
+experiencing slowdowns. 
 
 {% endcapture %}
 
