@@ -2,8 +2,10 @@
 
 # - name:    Name of project or feature
 #   game:    Name of game feature is from (if applicable)
-#   image:   Project image
+#   image:   Project image (1080p expected, LEAVE BLANK IF ADDING VIDEO)
+#   video:   Project video (1080p expected)
 #   description: Brief summary of project
+#   link:   Page link
 
 
 - name: Jellyfish Platforms
