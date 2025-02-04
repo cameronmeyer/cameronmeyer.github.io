@@ -25,12 +25,11 @@ implementing many of these items, primarily in the late-game 'Crucible' region a
 
 Eldren caches spawn occasionally across the land of the Crucible. They are timed challenges for the player with
 two main components: a key to collect, and a cache to place it in. If a player can connect both within the allotted
-time window, they will be granted some loot for their efforts.
+time window, they will be granted loot for their efforts.
 
-The key is a large crystalline hexagonal prism with emissives and VFX to draw the player in. Once obtained, a miniaturized
-version will float behind the player as they transport it to the cache. The cache is a hub for the key, with a hexagonal
-channel to place it in. The key rotates and slides into place, alighting emissive lines on the cache. Then, the whole cache 
-base glows and the VFX grow more intense as the cache has been fully activated, ready to reward the player.
+The key is a large crystal prism with emissives and VFX to draw the player in. The cache is a hub for the key, with a
+hexagonal channel to place it. The key rotates and slides into place, enabling emissives on the cache. The cache's
+base glows and its VFX grow more intense as the cache has been fully activated, ready to reward the player.
 {% endcapture %}
 
 {% capture block_video %}
@@ -71,10 +70,10 @@ base glows and the VFX grow more intense as the cache has been fully activated, 
 
 
 
-[//]: # --- HALLUCINOGENIC PLANTS --- # :[\\]
+[//]: # --- HALLUCINOGENIC MUSHROOMS --- # :[\\]
 
 {% capture block_content %}
-### HALLUCINOGENIC PLANTS
+### HALLUCINOGENIC MUSHROOMS
 
 - Shader animation when activated
 - Custom anim graph
@@ -101,11 +100,11 @@ base glows and the VFX grow more intense as the cache has been fully activated, 
 {% capture block_content %}
 ### AVALA'S FLOWERS
 
-In *Wayfinder*, godsblood is a key power source extracted from underground veins.
-That fluid flows through this gritty, forged chest.
+During the **___** quest, *Seeker Avala* requests the player to craft fertilizer for sick plants found in *The Crucible*. 
+The player can find wilted, sickly looking flowers to help revive. Once fertilized, the plants spring back to life,
+regaining their color and posture.
 
-As the chest opens, the godsblood drains from the chest. The liquid level in pipes on either side
-goes down, and the chest loses its lustrous green emissive once the player has looted from it.
+*Discuss tech here.*
 {% endcapture %}
 
 {% capture block_video %}
