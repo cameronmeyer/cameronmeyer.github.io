@@ -24,6 +24,14 @@ description: Welcome to the ACTCG page.
 
 {% include spacer.html amount="0.5rem" %}
 
+Since the Nintendo DS era, Animal Crossing has been one of my favorite game franchises. When my teammate [Katie Sauter](https://www.artstation.com/katiesauter)
+approached me about creating a virtual trading card game inspired by the series, I knew I couldn't resist.
+
+Our Animal Crossing TCG is styled after the *New Horizons* series entry. We aimed to stay faithful to the source material while supporting TCG gameplay and 
+optimizing assets to support low-spec devices. 
+
+You can view our project repository [here](https://github.com/Kaitlz/ACTCG_Unity).
+
 
 
 
@@ -43,13 +51,14 @@ description: Welcome to the ACTCG page.
 {% capture block_content %}
 ### FISH
 
-[FISH] spawn occasionally across the land of the Crucible. They are timed challenges for the player with
-two main components: a key to collect, and a cache to place it in. If a player can connect both within the allotted
-time window, they will be granted loot for their efforts.
+To help the environment feel more lively, I implemented a fish to swim around the river. In an attempt to create an optimized asset
+in a short timeframe, I developed the fish as a shader applied to a quad.
 
-The key is a large crystal prism with emissives and VFX to draw the player in. The cache is a hub for the key, with a
-hexagonal channel to place it. The key rotates and slides into place, enabling emissives on the cache. The cache's
-base glows and its VFX grow more intense as the cache has been fully activated, ready to reward the player.
+This fish only needed to look believeable swimming around the river--it did not need fancy movement logic for a dynamic fishing
+gameplay experience. So, the quad was simply animated in a loop to swim about the river. 
+
+The timeline controlled not only the quad transform, but also how quicky the fish was swimming (tail frequency), how hard it was
+swimming (tail amplitude), and when it would create surface ripples from water displacement.
 {% endcapture %}
 
 {% capture block_video %}
@@ -70,8 +79,23 @@ base glows and its VFX grow more intense as the cache has been fully activated, 
 {% capture block_content %}
 ### FISH SHADER
 
-The [FISH SHADER] tool hooks into Unreal Engine's automation test framework, allowing us to launch it with the click of a button.
-The test reads from data tables to determine the performance test's parameters, including.
+shader: 
+- fairly simple
+- generate a sine wave with control over frequency and amplitude control
+	- input to sine wave is called CurrentPhase, set in code
+- use the sine wave to offset quad UVs so the tail can flick back and forth
+- the offset sine UVs are applied to the quad with a mask, so the head is stationary while the tail moves
+
+we had to put some logic in code because in order to change tail frequency, the sine input must be dependant on the previous frame input. 
+adjusting the frequency directly in a timeline causes stutter and errattic behavior. keeping a cumulative phase value allows for smooth transitions
+
+code:
+- each frame we determine our state (not turning, left turn, right turn)
+- if our current phase + (deltaTime * frequency) >= default phase (in other words, are we safe to adjust phase without stutter?)
+	- reduce the phase so we don't go off to infinity (i.e. going from 2pi to 0, removing a whole rotation but maintaining the sine value)
+- else
+	- (default behavior) increment currentPhase by deltaTime * frequency
+- set the material parameter
 {% endcapture %}
 
 {% capture block_image %}
@@ -93,13 +117,11 @@ The test reads from data tables to determine the performance test's parameters, 
 {% capture block_content %}
 ### CARD COMPONENTS
 
-[CARD COMPONENTS] spawn occasionally across the land of the Crucible. They are timed challenges for the player with
-two main components: a key to collect, and a cache to place it in. If a player can connect both within the allotted
-time window, they will be granted loot for their efforts.
-
-The key is a large crystal prism with emissives and VFX to draw the player in. The cache is a hub for the key, with a
-hexagonal channel to place it. The key rotates and slides into place, enabling emissives on the cache. The cache's
-base glows and its VFX grow more intense as the cache has been fully activated, ready to reward the player.
+- cards are assembled with several component parts
+- this allowed us to easily iterate on specific card components
+- also allows for easier data population
+- card data is stored as a scriptable object and then populated into card prefabs, each card is based off a parent prefab instead
+	of having its own
 {% endcapture %}
 
 {% capture block_video %}
@@ -115,8 +137,15 @@ base glows and its VFX grow more intense as the cache has been fully activated, 
 {% capture block_content %}
 ### SCRIPTABLE OBJECTS
 
-The [SCRIPTABLE OBJECT] tool hooks into Unreal Engine's automation test framework, allowing us to launch it with the click of a button.
-The test reads from data tables to determine the performance test's parameters, including.
+- card scriptable objects are a uniform way to organize card data
+- each field can be adjusted per card
+- icons, materials, colors, and text are stored here for each card
+- there is a parent card scriptable object with multiple children for each card type
+	- special npc
+	- villager
+	- fruit
+	- tool
+- cards are populated at runtime
 {% endcapture %}
 
 {% capture block_image %}
@@ -146,8 +175,14 @@ The test reads from data tables to determine the performance test's parameters, 
 {% capture block_content %}
 ### PARALLAX SHADER
 
-The [PARALLAX] tool hooks into Unreal Engine's automation test framework, allowing us to launch it with the click of a button.
-The test reads from data tables to determine the performance test's parameters, including.
+The logic to add parallax elements to a shader is  quite simple. Relative to the camera view direction, we can adjust
+how strong the parallax effect is along the X and Y directions. We also apply scaling and offset to the mesh UVs and 
+add them to the parallax intensity `Vector2`.
+
+By creating our parallax UVs this way, we can call this logic repeatedly as a subgraph of our shader. Each of our
+cards in the game supports up to five parallax elements on their material, each with unique scale, offset, and 
+parallax intensity settings. With some fine tuning, we can present multiple layers of depth that feel natural to
+the player.
 {% endcapture %}
 
 {% capture block_image %}
@@ -164,21 +199,23 @@ The test reads from data tables to determine the performance test's parameters, 
 {% capture block_content %}
 ### PARALLAX DEMO
 
-[PARALLAX] spawn occasionally across the land of the Crucible. They are timed challenges for the player with
-two main components: a key to collect, and a cache to place it in. If a player can connect both within the allotted
-time window, they will be granted loot for their efforts.
+To demonstrate the parallax shader in action, these videos show just the character portrait section of a playing card.
 
-The key is a large crystal prism with emissives and VFX to draw the player in. The cache is a hub for the key, with a
-hexagonal channel to place it. The key rotates and slides into place, enabling emissives on the cache. The cache's
-base glows and its VFX grow more intense as the cache has been fully activated, ready to reward the player.
+Above is the finalized version of this portrait. To sell the effect of juggling on a highwire, we lock the character
+in place with a parallax intensity of zero. Each of the juggling balls moves as though they are being thrown toward the
+player, with the closest of the balls having the greatest parallax intensity. The background moves in the opposite 
+direction of the juggling balls, showcasing its distance from the viewer.
+
+Below demonstrates controls we have to place each parallax element within the portrait and adjust how they will move
+relative to the viewer.
 {% endcapture %}
 
 {% capture block_video %}
-{{path}}PietroPlacement.mp4
+{{path}}PietroTilt.mp4
 {% endcapture %}
 
 {% capture block_video2 %}
-{{path}}PietroTilt.mp4
+{{path}}PietroPlacement.mp4
 {% endcapture %}
 
 {% include block.html content=block_content video=block_video video2=block_video2 video_first=true %}
@@ -193,16 +230,24 @@ base glows and its VFX grow more intense as the cache has been fully activated, 
 
 
 
+[//]: # --- CARD MOVEMENT --- # :[\\]
+
 {% capture block_content %}
 ### CARD GAMEPLAY/JUICE/MOVEMENT
 
-[CARD GAMEPLAY] spawn occasionally across the land of the Crucible. They are timed challenges for the player with
-two main components: a key to collect, and a cache to place it in. If a player can connect both within the allotted
-time window, they will be granted loot for their efforts.
-
-The key is a large crystal prism with emissives and VFX to draw the player in. The cache is a hub for the key, with a
-hexagonal channel to place it. The key rotates and slides into place, enabling emissives on the cache. The cache's
-base glows and its VFX grow more intense as the cache has been fully activated, ready to reward the player.
+- cards have multiple states
+	- on board
+		- in play
+		- in deck or discard
+	- in hand
+		- hovered
+		- unhovered
+		- selected (floating)
+- goal of juicy, good-feeling interactions with cards
+- nothing happens too stiffly
+- highlighted cards straighten and enlarge for readability
+- cards in hand can be reorganized
+- fanned cards in hand reposition when a card is selected or placed back in hand
 {% endcapture %}
 
 {% capture block_video %}
@@ -212,3 +257,18 @@ base glows and its VFX grow more intense as the cache has been fully activated, 
 {% include block.html content=block_content video=block_video %}
 
 {% include spacer.html amount="1.5rem" %}
+
+
+
+
+
+---
+
+
+
+
+
+[//]: # --- CREDITS --- # :[\\]
+
+Special thanks to [Syd Roberts](https://www.artstation.com/sydroberts) for her Elmer illustration, and to
+[Ryan Polasky](https://ryanpolasky.carrd.co/) for composing the music.
