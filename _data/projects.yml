@@ -43,6 +43,6 @@
 
 - name: Interactables
   game: Wayfinder
-  image: plants.png
+  image: interactables.png
   description: Miscellaneous interactable objects in Wayfinder!
   link: /interactables/

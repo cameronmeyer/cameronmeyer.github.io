@@ -79,23 +79,17 @@ swimming (tail amplitude), and when it would create surface ripples from water d
 {% capture block_content %}
 ### FISH SHADER
 
-shader: 
-- fairly simple
-- generate a sine wave with control over frequency and amplitude control
-	- input to sine wave is called CurrentPhase, set in code
-- use the sine wave to offset quad UVs so the tail can flick back and forth
-- the offset sine UVs are applied to the quad with a mask, so the head is stationary while the tail moves
+The fish shader is fairly simple. We generate a sine wave with parameters for frequency and amplitude. We use the sine wave to offset the
+quad's UVs so the tail can move back and forth. These offset UVs are applied to the quad with a mask that allows the tail to move while
+the head stays still.
 
-we had to put some logic in code because in order to change tail frequency, the sine input must be dependant on the previous frame input. 
-adjusting the frequency directly in a timeline causes stutter and errattic behavior. keeping a cumulative phase value allows for smooth transitions
+When setting the frequency of a sine wave directly, the function adjusts relative to its origin point. So if we're sampling the sine function
+at a non-zero time value, animating the frequency will cause erratic behavior as the output traverses many peaks and troughs of the sine function.
+To prevent this, we keep track of the wave's current phase. 
 
-code:
-- each frame we determine our state (not turning, left turn, right turn)
-- if our current phase + (deltaTime * frequency) >= default phase (in other words, are we safe to adjust phase without stutter?)
-	- reduce the phase so we don't go off to infinity (i.e. going from 2pi to 0, removing a whole rotation but maintaining the sine value)
-- else
-	- (default behavior) increment currentPhase by deltaTime * frequency
-- set the material parameter
+Each frame's input to the sine function depends on the previous frame value to achieve a smooth result. We increment the current phase by
+`(deltaTime * frequency)`. Whenever the current phase maps to an output beyond one period of the sine function, we subtract by one period to 
+prevent an infinitely increasing phase.
 {% endcapture %}
 
 {% capture block_image %}
