@@ -77,8 +77,6 @@ swimming (tail amplitude), and when it would create surface ripples from water d
 
 
 {% capture block_content %}
-### FISH SHADER
-
 The fish shader is fairly simple. We generate a sine wave with parameters for frequency and amplitude. We use the sine wave to offset the
 quad's UVs so the tail can move back and forth. These offset UVs are applied to the quad with a mask that allows the tail to move while
 the head stays still.
@@ -87,7 +85,7 @@ When setting the frequency of a sine wave directly, the function adjusts relativ
 at a non-zero time value, animating the frequency will cause erratic behavior as the output traverses many peaks and troughs of the sine function.
 To prevent this, we keep track of the wave's current phase. 
 
-Each frame's input to the sine function depends on the previous frame value to achieve a smooth result. We increment the current phase by
+Each frame's input to the sine function depends on the previous frame's value to achieve a smooth result. We increment the current phase by
 `(deltaTime * frequency)`. Whenever the current phase maps to an output beyond one period of the sine function, we subtract by one period to 
 prevent an infinitely increasing phase.
 {% endcapture %}
@@ -96,11 +94,27 @@ prevent an infinitely increasing phase.
 {{path}}FishShader.png
 {% endcapture %}
 
-{% include image_block.html content=block_content image=block_image image_first=true %}
+<div class="content">
+    <div class="block border border-radius-lg flex flex-row">
+        <div class="w-full">
+			<h3>FISH SHADER</h3>
+            <img class="border-plain border-radius-md mt-2" src="{{ block_image }}" />
+			<div markdown="1">{{block_content}}</div>
+		</div>
+	</div>
+</div>
 
 {% include spacer.html amount="1.5rem" %}
 
+
+
+
+
 ---
+
+
+
+
 
 [//]: # --- CARD BREAKDOWN --- # :[\\]
 
@@ -111,11 +125,8 @@ prevent an infinitely increasing phase.
 {% capture block_content %}
 ### CARD COMPONENTS
 
-- cards are assembled with several component parts
-- this allowed us to easily iterate on specific card components
-- also allows for easier data population
-- card data is stored as a scriptable object and then populated into card prefabs, each card is based off a parent prefab instead
-	of having its own
+Our TCG's playing cards are assembled from several component parts. Constructing cards this way allows for easy swapping of patterns, icons, and text
+that can be populated from card data. Each card's data is stored as a scriptable object and then populated into a basic card prefab at runtime.
 {% endcapture %}
 
 {% capture block_video %}
@@ -131,15 +142,12 @@ prevent an infinitely increasing phase.
 {% capture block_content %}
 ### SCRIPTABLE OBJECTS
 
-- card scriptable objects are a uniform way to organize card data
-- each field can be adjusted per card
-- icons, materials, colors, and text are stored here for each card
-- there is a parent card scriptable object with multiple children for each card type
-	- special npc
-	- villager
-	- fruit
-	- tool
-- cards are populated at runtime
+Scriptable objects provide a uniform way to organize card data. Each exposed field can be assigned per card, storing what 
+icons, materials, colors, and text that card should use. 
+
+The base card scriptable object contains general data applicable to all card types such as color scheme, name, and type. 
+Each card type then inherits from the base object to support additional, type-specific data, like species and birthday
+information for `Villager` cards, or happiness point values for `Fruit` cards.
 {% endcapture %}
 
 {% capture block_image %}
@@ -224,24 +232,27 @@ relative to the viewer.
 
 
 
-[//]: # --- CARD MOVEMENT --- # :[\\]
+[//]: # --- CARD INTERACTIVITY --- # :[\\]
 
 {% capture block_content %}
-### CARD GAMEPLAY/JUICE/MOVEMENT
+### CARD INTERACTIVITY
 
-- cards have multiple states
-	- on board
-		- in play
-		- in deck or discard
-	- in hand
-		- hovered
-		- unhovered
-		- selected (floating)
-- goal of juicy, good-feeling interactions with cards
-- nothing happens too stiffly
-- highlighted cards straighten and enlarge for readability
-- cards in hand can be reorganized
-- fanned cards in hand reposition when a card is selected or placed back in hand
+When developing card interaction logic, I aimed for polished movement. Specifically, I didn't want the game to feel 'stiff' to interact with.
+
+Before implementation, I identified the possible states a card could be placed in:
+- On game board:
+	- In play
+	- In deck or discard
+- In hand:
+	- Hovered
+	- Unhovered
+	- Currently selected (clicked)
+
+To add polish and improve the player experience, I implemented the following behaviors:
+- Highlighted cards straighten and enlarge for readability
+- Cards in hand can be reordered
+- Fanned cards in hand reposition when a card is selected/dragged away or placed back in hand
+- Selected cards tilt in the direction they're moving toward as they are dragged across the board
 {% endcapture %}
 
 {% capture block_video %}
@@ -266,3 +277,5 @@ relative to the viewer.
 
 Special thanks to [Syd Roberts](https://www.artstation.com/sydroberts) for her Elmer illustration, and to
 [Ryan Polasky](https://ryanpolasky.carrd.co/) for composing the music.
+
+{% include spacer.html amount="1.5rem" %}

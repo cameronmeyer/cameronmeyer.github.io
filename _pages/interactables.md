@@ -49,9 +49,9 @@ base glows and its VFX grow more intense as the cache has been fully activated, 
 {% capture block_content %}
 ### HAZARD MUSHROOMS
 
-- Idle pulsing
-- Custom anim graph
-- Shader animation (idle and activated)
+The hazardous mushrooms found in *Wayfinder*'s *Crucible* region spew spores and residue that obscure the player's vision. They 
+have a slow idle emissive pulse that warns players to stay away. But if the player gets too close, the mushroom will animate to 
+shoot out its residue before going dark and dormant, unable to repeatedly harm the player. 
 {% endcapture %}
 
 {% capture block_video %}
@@ -75,8 +75,9 @@ base glows and its VFX grow more intense as the cache has been fully activated, 
 {% capture block_content %}
 ### HALLUCINOGENIC MUSHROOMS
 
-- Shader animation when activated
-- Custom anim graph
+Small patches of hallucinogenic mushrooms are also commonly found in *The Crucible*. Getting too close to one of these will 
+spawn spores, dust, and even fish that distract and cloud the player's view. This etherial plant will only give players
+visions once before they fade in color and then remain dormant.
 {% endcapture %}
 
 {% capture block_video %}
@@ -100,11 +101,9 @@ base glows and its VFX grow more intense as the cache has been fully activated, 
 {% capture block_content %}
 ### AVALA'S FLOWERS
 
-During the **___** quest, *Seeker Avala* requests the player to craft fertilizer for sick plants found in *The Crucible*. 
+During the quest *'The Cut'*, *Seeker Avala* requests the player to craft fertilizer for sick plants found in *The Crucible*. 
 The player can find wilted, sickly looking flowers to help revive. Once fertilized, the plants spring back to life,
 regaining their color and posture.
-
-*Discuss tech here.*
 {% endcapture %}
 
 {% capture block_video %}
@@ -124,11 +123,17 @@ regaining their color and posture.
 {% capture block_content %}
 ### DOORS AND WINDOWS
 
-In *Wayfinder*, godsblood is a key power source extracted from underground veins.
-That fluid flows through this gritty, forged chest.
+In *Wayfinder*, players can own and decorate their own apartment. Not only that, but players can visit each others' apartments too. 
+By default, the apartments are completely void of any furniture and decor, although they do have some permanent fixtures--doors and 
+windows. 
 
-As the chest opens, the godsblood drains from the chest. The liquid level in pipes on either side
-goes down, and the chest loses its lustrous green emissive once the player has looted from it.
+Designed to bring just a bit more interactivity to their homes, doors and windows may open and close as the player pleases. 
+
+For ease of navigation, doors can open in either direction, and they will always self-close whenever the player is far enough away.
+If in multiplayer, doors cannot be opened into a player on the other side. Similarly, if a door is opened, it will not self-close 
+until all players are out of its range. 
+
+If somehow a player manages to open a door or window into another player, we apply a knockback force on that player to prevent clipping.
 {% endcapture %}
 
 {% capture block_video %}
@@ -152,11 +157,12 @@ goes down, and the chest loses its lustrous green emissive once the player has l
 {% capture block_content %}
 ### CRITICAL ROLE GAMEBOARDS
 
-In *Wayfinder*, godsblood is a key power source extracted from underground veins.
-That fluid flows through this gritty, forged chest.
+*Wayfinder*'s first DLC bundle is a partnership with *Critical Role*, bringing skins of their popular characters into the game, as well as 
+Dungeons and Dragons inspired props. Among other things, this included a DnD game board depicting a battle, and a tray of dice. 
 
-As the chest opens, the godsblood drains from the chest. The liquid level in pipes on either side
-goes down, and the chest loses its lustrous green emissive once the player has looted from it.
+When interacted with, the battle board will randomly choose an animation of a battle sequence to play out with all the game pieces. The 
+dice trays can spawn with multiple dice configurations once placed in an apartment. Once rolled, the dice tray uses flashy visual effects to
+display a random result from a D20.
 {% endcapture %}
 
 {% capture block_video %}
