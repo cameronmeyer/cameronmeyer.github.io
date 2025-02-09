@@ -185,6 +185,6 @@ display a random result from a D20.
 Special thanks to [Eleanore Falck](https://www.artstation.com/eleanore_falck),
 [Rebecca McManamy](https://www.rebeccamcmanamy.com/), [Ryan Cullum](https://www.ryanmakingthings.com),
 [Brittany Rojas](https://www.artstation.com/brittanyhein3d),
-and [Dave Sullivan](https://davesullivanonline.ca/) for helping to bring these platforms to life!
+and [Dave Sullivan](https://davesullivanonline.ca/) for helping to bring these interactables to life!
 
 {% include spacer.html amount="1.5rem" %}

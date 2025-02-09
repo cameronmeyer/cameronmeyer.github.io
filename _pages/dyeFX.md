@@ -63,4 +63,11 @@ applying new color to the particle.
 
 {% include block.html content=block_content video=block_video video2=block_video2 %}
 
-{% include spacer.html amount="2rem" %}
+{% include spacer.html amount="1rem" %}
+
+---
+
+Special thanks to [Brittany Rojas](https://www.artstation.com/brittanyhein3d), [Ryan Rosanky](https://www.artstation.com/rosanky), Nathan Watson, 
+[Isabel Grayce](https://www.artstation.com/isabelgrayce), and [Han Lam](https://www.artstation.com/hanromi) for helping bring this system to life. 
+
+{% include spacer.html amount="1.5rem" %}

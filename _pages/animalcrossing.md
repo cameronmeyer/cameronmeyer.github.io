@@ -275,7 +275,9 @@ To add polish and improve the player experience, I implemented the following beh
 
 [//]: # --- CREDITS --- # :[\\]
 
-Special thanks to [Syd Roberts](https://www.artstation.com/sydroberts) for her Elmer illustration, and to
+Thank you to my teammate [Katie Sauter](https://www.artstation.com/katiesauter) for developing the concept and the environment. 
+
+Additional thanks to [Syd Roberts](https://www.artstation.com/sydroberts) for her Elmer illustration, and to
 [Ryan Polasky](https://ryanpolasky.carrd.co/) for composing the music.
 
 {% include spacer.html amount="1.5rem" %}
