@@ -8,6 +8,18 @@ nav.main {
     font-weight: 600;
     z-index: 500;
 
+    @media (max-width: 768px) {
+        .links-container {
+            display: none;
+        }
+    }
+
+    @media (min-width: 769px) {
+        .links-container {
+            display: auto;
+        }
+    }
+
     @media (max-width: 991px) {
         //padding-bottom: 2px;
         background-color: $clr-cream;
@@ -29,6 +41,11 @@ nav.main {
         .links.active {
             max-height: 13rem;
         }
+
+        .dots {
+            display: none;
+            margin: 0px;
+        }
     }
 
     @media (min-width: 992px) {
@@ -39,6 +56,32 @@ nav.main {
             > * {
                 background-color: $clr-cream;
             }
+        }
+
+        .dots {
+            justify-content: center;
+            flex: 1 1 0px;
+        }
+
+        .dot-1, .dot-2, .dot-3, .dot-4 {
+            width: .6rem;
+            height: .6rem;
+        }
+
+        .dot-1 {
+            background-color: $clr-dark-sapphire;
+        }
+
+        .dot-2 {
+            background-color: $clr-jalapeno-red;
+        }
+
+        .dot-3 {
+            background-color: $clr-mandarin-red;
+        }
+
+        .dot-4 {
+            background-color: $clr-squash-blossom;
         }
     }
     /* Dropdown Button */
@@ -52,6 +95,7 @@ nav.main {
         position: relative;
         display: grid;
         min-width: 6rem;
+
         > *:not(.dropdown-content) {
             transition: transform .1s;
         }
@@ -98,6 +142,7 @@ nav.main {
         .dropdown-content {
             display: block;
         }
+
         > *:not(.dropdown-content) {
             transform: translateY(-0.25rem) scale(1.1);
         }
@@ -133,6 +178,7 @@ nav.main {
 
     .link:hover {
         color: $clr-mandarin-red;
+
         > * {
             transform: translateY(-0.25rem) scale(1.1);
         }
@@ -146,32 +192,5 @@ nav.main {
     .current-page {
         color: $clr-squash-blossom;
         font-weight: bold;
-    }
-
-    .dots {
-        margin: auto;
-        justify-content: center;
-        flex: 1 1 0px;
-    }
-
-    .dot-1, .dot-2, .dot-3, .dot-4 {
-        width: .6rem;
-        height: .6rem;
-    }
-
-    .dot-1 {
-        background-color: $clr-dark-sapphire;
-    }
-
-    .dot-2 {
-        background-color: $clr-jalapeno-red;
-    }
-
-    .dot-3 {
-        background-color: $clr-mandarin-red;
-    }
-
-    .dot-4 {
-        background-color: $clr-squash-blossom;
     }
 }
