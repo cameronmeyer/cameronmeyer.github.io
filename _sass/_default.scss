@@ -76,6 +76,79 @@ $max-width: 900px;
     }
 }
 
+@media (max-width: 768px) {
+    .home-image {
+        padding-top: .25rem;
+        padding-bottom: .25rem;
+        max-width: 100%;
+    }
+
+    .project {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .empty-project {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+        height: 0px;
+    }
+}
+
+@media (min-width: 769px) {
+    .home-image {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        max-width: 75%;
+    }
+
+    .project {
+        flex: 1 1 43%;
+        max-width: 47%;
+    }
+
+    .empty-project {
+        flex: 1 1 43%;
+        max-width: 50%;
+        margin-right: .9rem;
+        margin-bottom: .9rem;
+    }
+}
+
+@media (max-width: 991px) {    
+    .about-pic {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+        height: 0px;
+    }
+
+    .nav-spacer {
+        padding-top: 7.1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .home-image {
+        max-width: 75%;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .about-pic-mobile {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+        height: 0px;
+    }
+
+    .nav-spacer {
+        padding-top: 5.674rem;
+    }
+}
+
+
 // changes text color with each occurance of h1 on page
 main.children-are-content {
     > h1, .h-color {
@@ -170,18 +243,17 @@ button
     line-height: 1;
 }
 
+.title-image {
+    justify-self: center;
+    max-height: 67.5%;
+}
+
 @media (min-width: 576px)
 {
     .sm\:w-max-1\/2
     {
         max-width: 50%;
     }
-}
-
-.title-image {
-    //display: grid;
-    justify-self: center;
-    max-height: 67.5%;
 }
 
 // colors

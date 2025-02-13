@@ -11,8 +11,8 @@ description: All about Cameron!
     <div class="align-items-center justify-items-center" style="display: grid;">
         <object class="title-image" data="/assets/images/AboutMe.svg" type="image/svg+xml"></object>
     </div>
-    <div class="border flex flex-row border-radius-lg" style="max-width: 100%">
-        <div class="flex flex-column items-center align-center self-center flex-noshrink pb-2 px-5 pt-5">
+    <div class="border flex flex-column lg:flex-row border-radius-lg" style="max-width: 100%">
+        <div class="about-pic flex flex-column items-center align-center self-center flex-noshrink pb-2 px-5 pt-5">
             <h1 class="mx-0 mt-2 mb-0 font-2xl line-1">Cameron Meyer</h1>
             <p class="mt-0 mb-2 font-lg">Technical Artist</p>
             <img class="border-image-circle mb-5" src="/assets/images/cameron.JPG" alt="Cameron's Portrait" style="width: 13rem; height: 13rem;"/>
@@ -30,6 +30,20 @@ description: All about Cameron!
                 I'm a passionate Technical Artist with a focus on 
                 asset implementation, tools development, and performance.
             </p>
+
+            <div class="about-pic-mobile flex flex-column items-center align-center self-center flex-noshrink p-5">
+                <h1 class="mx-0 mt-2 mb-0 font-2xl line-1">Cameron Meyer</h1>
+                <p class="mt-0 mb-2 font-lg">Technical Artist</p>
+                <img class="border-image-circle mb-5" src="/assets/images/cameron.JPG" alt="Cameron's Portrait" style="width: 13rem; height: 13rem;"/>
+                <a class="mt-3" href="https://www.linkedin.com/in/cameron-meyer/">
+                    <i class="icon-linkedin"></i>
+                    Linkedin
+                </a>
+                <a href="/resume/">
+                    View Resume
+                </a>
+            </div>
+
             <p class="mt-0 mb-2 font-lg" align="left">
                 As a Technical Artist at Airship Syndicate, I specialize in optimizing internal processes
                 for developers by creating tools in Python, C++, and Unreal Blueprints. I also work on diagnosing

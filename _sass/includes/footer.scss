@@ -29,14 +29,14 @@ footer.main {
             padding-top: 2px;
             background-color: $clr-cream;
 
-            .home-logo {
-                max-width: 16.5%;
-                flex: 1 1 5%;
-            }
-
             > * {
                 background-color: $clr-cream;
             }
         }
+    }
+
+    .home-logo {
+        max-width: 16.5%;
+        flex: 1 1 5%;
     }
 }

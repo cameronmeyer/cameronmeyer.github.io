@@ -5,13 +5,11 @@ description: Welcome to my portfolio website!
 ---
 
 <div class="content flex flex-column justify-items-center align-items-center">
-    <object class="pt-8" style="max-width: 75%;" data="/assets/images/CameronMeyer_Logo_Full.svg" type="image/svg+xml"></object>  
-    
-    <div class="pt-8"></div>
+    <object class="home-image" data="/assets/images/CameronMeyer_Logo_Full.svg" type="image/svg+xml"></object>  
 
     <h1 class="mb-4 h-color font-2xl" align="center">Crafting Interactive Experiences <br> with Code and Creativity</h1>
 
-    <div class="pt-8"></div>
+    <div class="lg:pt-8"></div>
 </div>
 
 {% include projects.html %}
