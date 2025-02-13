@@ -8,18 +8,6 @@ nav.main {
     font-weight: 600;
     z-index: 500;
 
-    @media (max-width: 768px) {
-        .links-container {
-            display: none;
-        }
-    }
-
-    @media (min-width: 769px) {
-        .links-container {
-            display: auto;
-        }
-    }
-
     @media (max-width: 991px) {
         //padding-bottom: 2px;
         background-color: $clr-cream;
@@ -33,13 +21,27 @@ nav.main {
             background-color: darken($clr-cream, 8);
         }
 
+        .home-logo {
+            width: 7.5%;
+            max-width: 7.5%;
+        }
+
         .links {
+            visibility: hidden;
+            opacity: 0;
             max-height: 0;
-            transition: max-height .3s;
+            transition: visibility 0s, opacity 0.3s, max-height 0.3s;
         }
 
         .links.active {
+            visibility: visible;
+            opacity: 1;
             max-height: 13rem;
+
+            > .link {
+                margin-top: .25rem;
+                margin-bottom: .25rem;
+            }
         }
 
         .dots {
