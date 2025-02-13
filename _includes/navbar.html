@@ -50,7 +50,7 @@
                             {% for item in site.data.navigation %}
                             {% if item.project %}
                             <!-- items of hover dropdown -->
-                            <a class="link text-center {% if page.title == item.title %} current-page {% endif %}" style="margin-top: 0.125rem;" href="{{ item.link }}"> {{ item.title }} </a>
+                            <a class="link text-left {% if page.title == item.title %} current-page {% endif %}" style="margin-top: 0.125rem;" href="{{ item.link }}"> {{ item.title }} </a>
                             {% endif %}
                             {% endfor %}
                         </div>
@@ -61,7 +61,7 @@
                     </a>
                 </div>
 
-                <div class="dots lg:flex flex-row my-0 mr-0 ml-auto display-none" style="width: {{ nav_images_width }}%; max-width: {{ nav_images_width }}%">
+                <div class="dots lg:flex flex-row my-0 mr-0 ml-auto" style="width: {{ nav_images_width }}%; max-width: {{ nav_images_width }}%">
                     <div class="dot-1 border-radius-full"></div>
                     <div class="dot-2 border-radius-full lg:ml-2"></div>
                     <div class="dot-3 border-radius-full lg:ml-2"></div>
