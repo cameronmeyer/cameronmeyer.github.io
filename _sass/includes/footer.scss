@@ -22,6 +22,11 @@ footer.main {
         .links.active {
             max-height: 13rem;
         }
+
+        .home-logo {
+            max-width: 30%;
+            flex: 1 1 5%;
+        }
     }
 
     @media (min-width: 992px) {
@@ -33,10 +38,10 @@ footer.main {
                 background-color: $clr-cream;
             }
         }
-    }
 
-    .home-logo {
-        max-width: 16.5%;
-        flex: 1 1 5%;
+        .home-logo {
+            max-width: 16.5%;
+            flex: 1 1 5%;
+        }
     }
 }

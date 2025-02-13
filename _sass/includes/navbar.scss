@@ -22,8 +22,7 @@ nav.main {
         }
 
         .home-logo {
-            width: 7.5%;
-            max-width: 7.5%;
+            max-width: 15%;
         }
 
         .links {
@@ -39,8 +38,16 @@ nav.main {
             max-height: 13rem;
 
             > .link {
+                min-width: 6rem;
+                align-items: center;
+                display: flex;
                 margin-top: .25rem;
                 margin-bottom: .25rem;
+
+                > * {
+                    height: 100%;
+                    transition: transform .1s;
+                }
             }
         }
 
