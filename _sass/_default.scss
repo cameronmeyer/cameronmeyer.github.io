@@ -94,10 +94,6 @@ $max-width: 900px;
         display: none;
         height: 0px;
     }
-
-    .nav-spacer {
-        padding-top: 3.75rem;
-    }
 }
 
 @media (min-width: 769px) {
@@ -128,10 +124,11 @@ $max-width: 900px;
         height: 0px;
     }
 
-    @media (min-width: 769px) {
-        .nav-spacer {
-            padding-top: 7.1rem;
-        }
+    .nav-spacer {
+        display: none;
+        visibility: hidden;
+        height: 0px;
+        padding-top: 0px;
     }
 }
 

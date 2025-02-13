@@ -2,11 +2,7 @@
 @import "includes/burger";
 
 nav.main {
-    position: fixed;
-    left: 0;
-    right: 0;
     font-weight: 600;
-    z-index: 500;
 
     @media (max-width: 991px) {
         //padding-bottom: 2px;
@@ -58,6 +54,11 @@ nav.main {
     }
 
     @media (min-width: 992px) {
+        position: fixed;
+        left: 0;
+        right: 0;
+        z-index: 500;
+
         .content {
             background-color: $clr-cream;
             //background: linear-gradient(90deg, $clr-jalapeno-red 10%, $clr-mandarin-red 20%, $clr-squash-blossom 40%, $clr-flat-flesh 50%, $clr-squash-blossom 60%, $clr-mandarin-red 80%, $clr-jalapeno-red 90%);
