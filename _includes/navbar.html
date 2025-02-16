@@ -36,15 +36,15 @@
 
                 {% assign links_padding=17.5 %}
                 <div class="links flex flex-column lg:flex-row items-center w-full lg:w-auto text-center stateful" for="nav-burger" style="padding-left: {{ links_padding }}%; padding-right: {{ links_padding }}%;">
-                    <a class="link lg:mx-2" href="/" style="flex: 0 0 19.6937%">
+                    <a class="link" href="/" style="flex: 0 0 19.6937%">
                         <object data="{{ homeLogo }}" type="image/svg+xml" style="pointer-events: none;"></object>
                     </a>
 
-                    <a class="link lg:mx-2" href="/about/" style="flex: 0 0 22.6101%">
+                    <a class="link" href="/about/" style="flex: 0 0 22.6101%">
                         <object data="{{ aboutLogo }}" type="image/svg+xml" style="pointer-events: none;"></object>
                     </a>
 
-                    <div class="dropdown items-center lg:mx-2" style="flex: 0 0 31.7037%">
+                    <div class="dropdown items-center" style="flex: 0 0 31.7037%">
                         <object data="{{ projectsLogo }}" type="image/svg+xml" style="pointer-events: none;"></object>
                         <div class="dropdown-content flex flex-column w-full lg:w-auto">
                             {% for item in site.data.navigation %}
@@ -56,7 +56,7 @@
                         </div>
                     </div>
 
-                    <a class="link lg:mx-2" href="/resume/" style="flex: 0 0 25.9925%">
+                    <a class="link" href="/resume/" style="flex: 0 0 25.9925%">
                         <object data="{{ resumeLogo }}" type="image/svg+xml" style="pointer-events: none;"></object>
                     </a>
                 </div>
