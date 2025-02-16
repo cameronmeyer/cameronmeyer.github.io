@@ -22,6 +22,13 @@ description: Cameron's Resume
 					metaData:{fileName: "CameronMeyer_TechnicalArtist_Resume.pdf"}
 				}, {embedMode: "IN_LINE"});
 			});
+			document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+				var adobeDCView = new AdobeDC.View({clientId: "b521ccac55ae40959eaf77b5594326c0", divId: "adobe-dc-view"});
+				adobeDCView.previewFile({
+					content:{location: {url: "/assets/images/CameronMeyer_TechnicalArtist_Resume.pdf"}},
+					metaData:{fileName: "CameronMeyer_TechnicalArtist_Resume.pdf"}
+				}, {embedMode: "IN_LINE"});
+			});
 		</script>
     </div>
 </div>
