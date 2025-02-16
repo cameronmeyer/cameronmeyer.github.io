@@ -1,11 +1,11 @@
 <nav class="main line-1">
     <div class="content-wrapper">
         <div class="content flex flex-column">
-            <div class="flex flex-column lg:flex-row items-center mt-3 lg:my-0">
+            <div class="flex flex-column lg:flex-row items-center my-3 lg:my-0">
                 {% assign nav_images_width=7.5 %}
                 <div class="flex flex-row items-center lg:mr-auto w-full">
-                    <a class="home-logo flex items-center m-0" alt="Home" href="/">
-                        <object data="/assets/images/CM_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                    <a class="home-logo m-0" alt="Home" href="/">
+                        <object class="h-full" data="/assets/images/CM_Logo.svg" type="image/svg+xml" style="pointer-events: none; vertical-align: bottom;"></object>
                     </a>
 
                     {% include burger.html id="nav-burger" class="ml-auto lg:display-none" %}
@@ -69,7 +69,7 @@
                 </div>
             </div>
             <div class="flex items-center">
-                <object class="w-full" data="/assets/images/Bars.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                <object class="w-full" data="/assets/images/Bars.svg" type="image/svg+xml" style="pointer-events: none; vertical-align: bottom;"></object>
             </div>
         </div>
     </div>

@@ -1,13 +1,13 @@
 <footer class="main">
     <div class="content-wrapper">
         <div class="content">
-            <object data="/assets/images/Bars_Reverse.svg" type="image/svg+xml" style="pointer-events: none;"></object>
-            <div class="flex flex-row">
+            <object data="/assets/images/Bars_Reverse.svg" type="image/svg+xml" style="pointer-events: none; vertical-align: bottom;"></object>
+            <div class="flex flex-row my-2">
                 <a class="home-logo align-self-center pr-6" alt="Home" href="/">
-                    <object data="/assets/images/CM_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                    <object data="/assets/images/CM_Logo.svg" type="image/svg+xml" style="pointer-events: none; vertical-align: bottom;"></object>
                 </a>
                 <div class="flex flex-column">
-                    <h1 class="pt-2">
+                    <h1>
                         Contact me!
                     </h1>
                     <div class="flex flex-column">
@@ -19,7 +19,9 @@
                             <p class="my-0">Linkedin</p>
                         </a>
                     </div>
-                    <div class="my-2 lg:my-0"></div>
+                </div>
+                <div class="display-block lg:display-none">
+                    {% include spacer.html amount="1rem" %}
                 </div>
             </div>
         </div>
