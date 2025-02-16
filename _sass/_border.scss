@@ -18,6 +18,52 @@ $box-shadow-y-hover: .1rem;
     box-shadow: $box-shadow-x $box-shadow-y $clr-jalapeno-red, $box-shadow-x*2 $box-shadow-y*2 $clr-mandarin-red, $box-shadow-x*3 $box-shadow-y*3 $clr-squash-blossom;
 }
 
+@media (max-width: 991px) {
+    .block-content {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        height: 0px;
+        max-height: 0px;
+        width: 0px;
+        max-width: 0px;
+        margin: 0 !important;
+    }
+
+    .block-content-mobile {
+        margin-bottom: 0px !important;
+
+        p {
+            margin-bottom: 0px !important;
+        }
+    }
+
+    .block-media {
+        margin: 0.5rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .block-content {
+        max-width: 40%;
+    }
+
+    .block-content-mobile {
+        display: none;
+        visibility: hidden;
+        opacity: 0;
+        height: 0px;
+        max-height: 0px;
+        width: 0px;
+        max-width: 0px;
+        margin: 0 !important;
+    }
+
+    .block-media {
+        flex-grow: 1;
+    }
+}
+
 .block {
     div {
         display: flex;
@@ -32,8 +78,11 @@ $box-shadow-y-hover: .1rem;
     video, image {
         overflow: hidden;
         align-self: center;
-        margin: 0.5rem;
         width: 100%;
+    }
+
+    .block-media {
+        gap: 0.5rem;
     }
 }
 

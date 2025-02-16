@@ -1,21 +1,23 @@
 <div class="content">
-    <div class="block border border-radius-lg flex flex-row">
+    <div class="block border border-radius-lg flex flex-column lg:flex-row">
         {% if include.image %}
             {% if include.image_first == true %}
                 <!-- CONTENT DIV MUST BE INLINED!! -->
-                <div class="w-full">
-                    <img class="border-plain border-radius-md mb-5" src="{{ include.image }}" alt="FolderContents.png" />
+                <div class="block-content-mobile" markdown="1">{{ include.content }}</div>
+                <div class="block-media">
+                    <img class="border-plain border-radius-md" src="{{ include.image }}" alt="FolderContents.png" />
                     {% if include.image2 %}
-                        <img class="border-plain border-radius-md mb-5" src="{{ include.image2 }}" alt="FolderContents.png" />
+                        <img class="border-plain border-radius-md" src="{{ include.image2 }}" alt="FolderContents.png" />
                     {% endif %}
                 </div>
-                <div style="max-width: 40%;" markdown="1">{{ include.content }}</div>
+                <div class="block-content" markdown="1">{{ include.content }}</div>
             {% else %}
-                <div style="max-width: 40%;" markdown="1">{{ include.content }}</div>
-                <div class="w-full">
-                    <img class="border-plain border-radius-md mb-5" src="{{ include.image }}" alt="FolderContents.png" />
+                <div class="block-content" markdown="1">{{ include.content }}</div>
+                <div class="block-content-mobile" markdown="1">{{ include.content }}</div>
+                <div class="block-media">
+                    <img class="border-plain border-radius-md" src="{{ include.image }}" alt="FolderContents.png" />
                     {% if include.image2 %}
-                        <img class="border-plain border-radius-md mb-5" src="{{ include.image2 }}" alt="FolderContents.png" />
+                        <img class="border-plain border-radius-md" src="{{ include.image2 }}" alt="FolderContents.png" />
                     {% endif %}
                 </div>
             {% endif %}

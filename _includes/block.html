@@ -1,9 +1,10 @@
 <div class="content">
-    <div class="block border border-radius-lg flex flex-row">
+    <div class="block border border-radius-lg flex flex-column lg:flex-row">
         {% if include.video %}
             {% if include.video_first == true %}
                 <!-- CONTENT DIV MUST BE INLINED!! -->
-                <div class="w-full">
+                <div class="block-content-mobile" markdown="1">{{ include.content }}</div>
+                <div class="block-media">
                     <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
                         <source src="{{ include.video }}" type="video/mp4">
                     </video>
@@ -13,10 +14,11 @@
                         </video>
                     {% endif %}
                 </div>
-                <div style="max-width: 40%;" markdown="1">{{ include.content }}</div>
+                <div class="block-content" markdown="1">{{ include.content }}</div>
             {% else %}
-                <div style="max-width: 40%;" markdown="1">{{ include.content }}</div>
-                <div class="w-full">
+                <div class="block-content" markdown="1">{{ include.content }}</div>
+                <div class="block-content-mobile" markdown="1">{{ include.content }}</div>
+                <div class="block-media">
                     <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
                         <source src="{{ include.video }}" type="video/mp4">
                     </video>

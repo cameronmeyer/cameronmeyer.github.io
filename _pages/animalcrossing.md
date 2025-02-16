@@ -96,10 +96,13 @@ prevent an infinitely increasing phase.
 
 <div class="content">
     <div class="block border border-radius-lg flex flex-row">
-        <div class="w-full">
+        <div>
 			<h3>FISH SHADER</h3>
-            <img class="border-plain border-radius-md mt-2" src="{{ block_image }}" />
-			<div markdown="1">{{block_content}}</div>
+			<div class="block-media">
+				<img class="border-plain border-radius-md" src="{{ block_image }}" />
+			</div>
+			<div class="block-content" markdown="1">{{ block_content }}</div>
+            <div class="block-content-mobile" markdown="1">{{ block_content }}</div>
 		</div>
 	</div>
 </div>
