@@ -4,7 +4,7 @@
             <div class="flex flex-column lg:flex-row items-center mt-3 lg:my-0">
                 {% assign nav_images_width=7.5 %}
                 <div class="flex flex-row items-center lg:mr-auto w-full">
-                    <a class="home-logo m-0" alt="Home" href="/">
+                    <a class="home-logo flex items-center m-0" alt="Home" href="/">
                         <object data="/assets/images/CM_Logo.svg" type="image/svg+xml" style="pointer-events: none;"></object>
                     </a>
 
@@ -68,7 +68,9 @@
                     <div class="dot-4 border-radius-full lg:ml-2"></div>
                 </div>
             </div>
-            <object data="/assets/images/Bars.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+            <div class="flex items-center">
+                <object class="w-full" data="/assets/images/Bars.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+            </div>
         </div>
     </div>
 </nav>
