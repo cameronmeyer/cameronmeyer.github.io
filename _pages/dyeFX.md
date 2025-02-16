@@ -9,7 +9,9 @@ description: Welcome to the dyeable vfx page.
 
 {% include spacer.html amount="1.5rem" %}
 
-# Dyeable Visual Effects
+<h1 class="text-center lg:text-left">
+	Dyeable Visual Effects
+</h1>
 
 ---
 

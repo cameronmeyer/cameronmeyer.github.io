@@ -9,7 +9,9 @@ description: Welcome to the jellyfish page.
 
 {% include spacer.html amount="1.5rem" %}
 
-# Jellyfish Platforms
+<h1 class="text-center lg:text-left">
+	Jellyfish Platforms
+</h1>
 
 ---
 

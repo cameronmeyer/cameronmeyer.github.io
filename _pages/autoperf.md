@@ -9,7 +9,9 @@ description: Welcome to the automated performance tool page.
 
 {% include spacer.html amount="1.5rem" %}
 
-# Automated Performance Testing
+<h1 class="text-center lg:text-left">
+	Automated Performance Testing
+</h1>
 
 ---
 

@@ -9,7 +9,9 @@ description: Welcome to the ACTCG page.
 
 {% include spacer.html amount="1.5rem" %}
 
-# Animal Crossing: The Trading Card Game
+<h1 class="text-center lg:text-left">
+	Animal Crossing: The Trading Card Game
+</h1>
 
 ---
 

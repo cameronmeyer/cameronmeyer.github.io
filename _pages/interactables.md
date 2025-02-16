@@ -9,7 +9,9 @@ description: Welcome to the plants page.
 
 {% include spacer.html amount="1.5rem" %}
 
-# Interactables
+<h1 class="text-center lg:text-left">
+	Interactables
+</h1>
 
 ---
 

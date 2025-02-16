@@ -9,7 +9,9 @@ description: Welcome to the chests page.
 
 {% include spacer.html amount="1.5rem" %}
 
-# Treasure Chests
+<h1 class="text-center lg:text-left">
+	Treasure Chests
+</h1>
 
 ---
 
