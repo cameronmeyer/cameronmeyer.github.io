@@ -5,6 +5,12 @@
     --dark-sapphire: #0c2461;
 }
 
+$box-border: .2rem;
+$box-shadow-x: .25rem;
+$box-shadow-y: .25rem;
+$box-shadow-x-hover: .1rem;
+$box-shadow-y-hover: .1rem;
+
 body
 {
     font-family: "Signika Negative", sans-serif;
@@ -128,6 +134,24 @@ $max-width: 900px;
         padding: 0px;
         margin: 0px;
     }
+
+    .project {
+        // .border
+        margin-right: $box-shadow-x*4.5;
+        margin-bottom: $box-shadow-y*4.5;
+        box-shadow: $box-shadow-x*1.5 $box-shadow-y*1.5 $clr-jalapeno-red, $box-shadow-x*3 $box-shadow-y*3 $clr-mandarin-red, $box-shadow-x*4.5 $box-shadow-y*4.5 $clr-squash-blossom;
+        transition: border .1s ease-in-out, box-shadow .25s ease-in-out;
+
+        img, video {
+            border: $box-border solid $clr-jalapeno-red;
+            border-radius: .5rem;
+            transition: border .1s ease-in-out;
+        }
+
+        h1 {
+            transition: color .1s ease-in-out;
+        }
+    }
 }
 
 @media (min-width: 992px) {
@@ -147,8 +171,48 @@ $max-width: 900px;
     .nav-spacer {
         padding-top: 5.674rem;
     }
+
+    .project {
+        // .border-button
+        margin-right: $box-shadow-x*4.5;
+        margin-bottom: $box-shadow-y*4.5;
+        box-shadow: 0px;
+        transition: border .1s ease-in-out, box-shadow .25s ease-in-out;
+
+        img, video {
+            border: $box-border solid $clr-jalapeno-red;
+            border-radius: .5rem;
+            transition: border .1s ease-in-out;
+        }
+
+        h1 {
+            transition: color .1s ease-in-out;
+        }
+    }
 }
 
+.project {
+    // .border (default)
+    background-color: $clr-cream;
+    border: $box-border solid $clr-jalapeno-red;
+}
+
+.project:hover, .project:focus, .project:active {
+    // .border-button
+    border: $box-border solid $clr-squash-blossom;
+    box-shadow: $box-shadow-x*1.5 $box-shadow-y*1.5 $clr-squash-blossom, $box-shadow-x*3 $box-shadow-y*3 $clr-mandarin-red, $box-shadow-x*4.5 $box-shadow-y*4.5 $clr-jalapeno-red;
+    transition: box-shadow .1s ease-in-out, border .2s ease-in-out;
+
+    img, video {
+        border: $box-border solid $clr-squash-blossom;
+        transition: border .1s ease-in-out;
+    }
+
+    h1 {
+        color: $clr-squash-blossom;
+        transition: color .1s ease-in-out;
+    }
+}
 
 // changes text color with each occurance of h1 on page
 main.children-are-content {

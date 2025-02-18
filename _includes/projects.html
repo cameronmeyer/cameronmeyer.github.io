@@ -4,14 +4,14 @@
 
 <div class="flex flex-row flex-wrap" style="gap: 1rem">
     {% for project in site.data.projects %}
-        <a class="project border-button border-radius-lg" href="{{ project.link }}">
+        <a class="project border-radius-lg" href="{{ project.link }}">
             <div class="flex flex-column flex-grow pb-2 px-5 pt-5">
                 <h1 class="h-color mb-2" align="center"> {{project.name}} </h1>
                 {% if project.image %}
                     <img class="border-radius-md mb-5" src="/assets/images/projects/{{project.image}}" alt="{{project.name}}" />
                 {% else %}
                     {% if project.video %}
-                        <video class="border-plain border-radius-md mb-5" style="border-radius: .5rem" autoplay muted loop>
+                        <video class="border-plain border-radius-md mb-5" style="border-radius: .5rem" autoplay muted loop webkit-playsinline playsinline>
                             <source src="/assets/images/projects/{{project.video}}" type="video/mp4">
                         </video>
                     {% endif %}

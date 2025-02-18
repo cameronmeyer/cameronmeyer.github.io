@@ -5,11 +5,11 @@
                 <!-- CONTENT DIV MUST BE INLINED!! -->
                 <div class="block-content-mobile" markdown="1">{{ include.content }}</div>
                 <div class="block-media">
-                    <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
+                    <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop webkit-playsinline playsinline>
                         <source src="{{ include.video }}" type="video/mp4">
                     </video>
                     {% if include.video2 %}
-                        <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
+                        <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop webkit-playsinline playsinline>
                             <source src="{{ include.video2 }}" type="video/mp4">
                         </video>
                     {% endif %}
@@ -19,11 +19,11 @@
                 <div class="block-content" markdown="1">{{ include.content }}</div>
                 <div class="block-content-mobile" markdown="1">{{ include.content }}</div>
                 <div class="block-media">
-                    <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
+                    <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop webkit-playsinline playsinline>
                         <source src="{{ include.video }}" type="video/mp4">
                     </video>
                     {% if include.video2 %}
-                        <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop>
+                        <video class="border-plain" style="border-radius: .5rem" autoplay muted controls loop webkit-playsinline playsinline>
                             <source src="{{ include.video2 }}" type="video/mp4">
                         </video>
                     {% endif %}

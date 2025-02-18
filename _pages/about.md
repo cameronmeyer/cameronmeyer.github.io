@@ -26,8 +26,8 @@ description: All about Cameron!
         </div>
         <div class="flex flex-column flex-grow pb-2 px-5 pt-5">
             <h1 class="h-color mb-2" align="center">Hi, I'm Cameron!</h1>
-            <p class="mx-0 mt-2 mb-6 font-xl" align="left" style="font-weight: 800;">
-                I'm a passionate Technical Artist with a focus on 
+            <p class="mx-0 mt-2 mb-6 font-xl text-center lg:text-left" style="font-weight: 800;">
+                I'm a passionate Technical Artist focusing on 
                 asset implementation, tools development, and performance.
             </p>
 
@@ -58,7 +58,7 @@ description: All about Cameron!
 
                 <br><br>
 
-                I graduated with a degree in Computer Science from UT Dallas, where I also served as an officer of
+                I graduated with a degree in Computer Science from UT Dallas, where I also served as president of
                 the Student Game Developer Association (SGDA) during my studies. In this role, I organized events
                 such as developer talks, game jams, and social nights, helping students connect with the game
                 development community and gain valuable industry insights.

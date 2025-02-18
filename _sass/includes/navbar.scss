@@ -81,7 +81,7 @@ nav.main {
             }
         }
 
-        .link:hover {
+        .link:hover, .link:focus, .link:active {
             color: $clr-mandarin-red;
 
             > * {
@@ -163,7 +163,7 @@ nav.main {
         transition: border .25s;
     }
     /* Change color of dropdown links on hover */
-    .dropdown-content a:hover, .dropdown-content a.current-page:hover {
+    .dropdown-content a:hover, .dropdown-content a.current-page:hover, .dropdown-content a:focus, .dropdown-content a.current-page:focus, .dropdown-content a:active, .dropdown-content a.current-page:active {
         color: $clr-white;
         border-radius: .5rem;
         background-color: $clr-mandarin-red;
@@ -175,7 +175,7 @@ nav.main {
         transition: color .25s, font-weight .25s;
     }
     /* Show the dropdown menu on hover */
-    .dropdown:hover {
+    .dropdown:hover, .dropdown:focus, .dropdown:active {
         .dropdown-content {
             display: block;
         }
