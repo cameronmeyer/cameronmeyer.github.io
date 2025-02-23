@@ -16,6 +16,11 @@ nav.main {
             background-color: darken($clr-cream, 8);
         }
 
+        .nav-home-burger {
+            max-width: 100%;
+            width: 100%;
+        }
+
         .home-logo {
             max-width: 15%;
         }
@@ -29,19 +34,20 @@ nav.main {
             gap: 0px;
             transition: visibility 0s, opacity 0.3s, max-height 0.3s;
             margin-bottom: 0px;
+            max-height: 0px;
 
             .link {
-                min-width: 6rem;
                 align-items: center;
             }
         }
 
         .links.active {
-            display: grid;
+            display: flex;
             visibility: visible;
             opacity: 1;
-            gap: 0.5rem;
+            gap: 0.75rem;
             margin-bottom: 0.5rem;
+            max-height: max-content;
         }
 
         .dots, .dot-1, .dot-2, .dot-3, .dot-4 {
@@ -69,9 +75,14 @@ nav.main {
             }
         }
 
+        .nav-home-burger {
+            max-width: 3.9rem;
+            width: 3.9rem;
+            min-width: 3.9rem;
+        }
+
         .link {
             color: $clr-jalapeno-red;
-            min-width: 6rem;
             align-items: center;
             display: flex;
 
@@ -93,11 +104,16 @@ nav.main {
             justify-content: center;
             align-items: center;
             gap: 1.25rem;
+            padding-left: 17.5%;
+            padding-right: 17.5%;
         }
 
         .dots {
             justify-content: center;
             flex: 1 1 0px;
+            max-width: 3.9rem;
+            width: 3.9rem;
+            min-width: 3.9rem;
         }
 
         .dot-1, .dot-2, .dot-3, .dot-4 {
@@ -121,6 +137,41 @@ nav.main {
             background-color: $clr-squash-blossom;
         }
     }
+
+    .links {
+        // Home
+        > *:nth-child(1) {
+            width: 19.2435%;
+        }
+        // About
+        > *:nth-child(2) {
+            width: 22.0933%;
+        }
+        // Projects
+        > *:nth-child(3) {
+            width: 30.9789%;
+        }
+        // Resume
+        > *:nth-child(4) {
+            width: 25.3983%;
+        }
+        // Home
+        > *:nth-child(1).current-page {
+            width: 21.5296% !important;
+        }
+        // About
+        > *:nth-child(2).current-page {
+            width: 24.3793% !important;
+        }
+        // Projects
+        > *:nth-child(3).current-page {
+            width: 33.2650% !important;
+        }
+        // Resume
+        > *:nth-child(4).current-page {
+            width: 27.6843% !important;
+        }
+    }
     /* Dropdown Button */
     .dropbtn {
         color: $clr-jalapeno-red;
@@ -131,7 +182,6 @@ nav.main {
     .dropdown {
         position: relative;
         display: grid;
-        min-width: 6rem;
 
         > *:not(.dropdown-content) {
             transition: transform .1s;
